@@ -1,0 +1,208 @@
+/* Scoped to social UI roots; safe to inject in all windows, including named chat popups. */
+:is(html.friendsui-container,html.client_chat_frame,.friendsui-container) {
+ --hs-paper:#e4e2ee; --hs-sidebar:#d6d1ec; --hs-ink:#0b0b0f; --hs-muted:#575066; --hs-acid:#e5f838; --hs-font:"Segoe UI",Arial,sans-serif;
+ background:#d6d1ec !important; color:#0b0b0f !important; font-family:var(--hs-font) !important;
+}
+:is(html.friendsui-container,html.client_chat_frame) body,
+.friendsui-container :is(.popup_chat_frame,.chat_main,.chat_main_flex,.multiChatDialog,.chatDialogs,.friendsListContainer,.FriendsListContent,.friendlistListContainer,.GroupChats,.ChatRoomList,.ChatRoomGroup_WindowContent,.ChatRoomGroupDialog_contents,.chatBody,.chatHistoryAndMembers,.ChatHistoryContainer,.ChatRoomGroupDialog_history,.ChatRoomGroup_Main_ContentAndMembers,.ChatRoomGroup_MainAndChatEntry) {
+ background:var(--hs-paper) !important; color:var(--hs-ink) !important; box-shadow:none !important;
+}
+.friendsui-container :is(.friendlistListContainer,.GroupChats,.ChatRoomList,.MemberListColumn,.ChatRoomMemberScrollList_List) { background:var(--hs-sidebar) !important; }
+.friendsui-container :is(.chatWindow,.VoiceRoomChatWindow,.ChatHistoryContainer) { background:var(--hs-paper) !important; background-image:none !important; }
+.friendsui-container :is(.friendListHeaderContainer,.chatHeader,.chatTitleBar,.titleBarContainer,.ChatTabs,.friendListFooter,.ChatRoomGroupDialog_header,.VoiceRoomChatTitle) {
+ background:#0c0c10 !important; background-image:none !important; color:#efedf7 !important; border-radius:0 !important; box-shadow:none !important; border-bottom:1px solid #e5f83840 !important;
+}
+.friendsui-container .friendListHeaderContainer { border-top:4px solid var(--hs-acid) !important; }
+.friendsui-container .friendListHeaderContainer::before { content:"HYPERSHIFT"; display:block; padding:12px 16px 4px; font:900 italic 19px/1 "Arial Black",var(--hs-font); letter-spacing:-.04em; color:#efedf7; }
+.friendsui-container .friendListHeaderContainer .currentUserContainer { background:transparent !important; border:0 !important; }
+.friendsui-container :is(.currentUserContainer,.friendListHeaderContainer) :is(.personaname,.personaName,.statusLabel,.friendsListSectionTitle) { color:#efedf7 !important; }
+.friendsui-container :is(.statusHeaderGlow,.insetShadow,.friendListInsetShadowBottom,.friendListInsetShadowTop) { opacity:0 !important; pointer-events:none !important; }
+.friendsui-container :is(.friendGroup,.groupHeaderContainer,.ChatRoomListGroupItem_header) { background:transparent !important; border-color:#79718835 !important; }
+.friendsui-container :is(.friendsListSectionTitle,.groupName,.groupNameLabel,.groupChatSectionTitle,.groupChatName,.ChatRoomListGroupItem_name,.SteamPlayerGroupFooterLabel) {
+ color:var(--hs-ink) !important; font-weight:800 !important; letter-spacing:.035em !important; text-shadow:none !important;
+}
+.friendsui-container :is(.groupCount,.groupCountCollapsed,.SteamPlayerGroupFooterCount,.personaState,.lastChatMessage,.FriendChatTimeStamp,.speakerTimeStamp,.msg.timeDivision,.chatFooter) { color:var(--hs-muted) !important; text-shadow:none !important; }
+.friendsui-container :is(.friend,.friendCell,.ChatRoomListGroupItem,.ChatRoomListGroupItemChatRooms,.ChatRoomMember,.SteamPlayerGroupFooter) { border-radius:0 !important; background:transparent !important; box-shadow:none !important; }
+.friendsui-container :is(.friend:hover,.friend.selected,.friend.gpfocus,.friend.gpfocuswithin,.ChatRoomListGroupItem:hover,.ChatRoomListGroupItem.selected,.unreadFriend,.activeChatRoom) { background:var(--hs-acid) !important; }
+.friendsui-container .friend :is(.personaname,.personaName,.friendName) { color:var(--hs-ink) !important; font-family:var(--hs-font) !important; text-shadow:none !important; }
+.friendsui-container .friend.offline :is(.personaname,.personaName) { color:#665d73 !important; }
+.friendsui-container .friend.online :is(.personaname,.personaName) { color:#49347a !important; }
+.friendsui-container .friend.ingame :is(.personaname,.personaName) { color:#1b6245 !important; }
+.friendsui-container :is(.avatar,.avatarHolder,.friendAvatar,.speakerAvatar,.ChatRoomGroupAvatar,.ChatRoomGroupAvatar_Avatar) { border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container :is(.friendSearchInput,.socialSearchContainer,.socialTabSearchContainer) { background:#f1edf9 !important; color:var(--hs-ink) !important; border:1px solid #50465f35 !important; border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container :is(.friendSearchInput input,.friendSearchInput,.friendSearchInput textarea) { color:var(--hs-ink) !important; font-family:var(--hs-font) !important; }
+.friendsui-container :is(input,textarea)::placeholder { color:#63576f !important; }
+.friendsui-container :is(.InnerChatTabs,.InnerChatTab,.ChatTab,.chatTab) { border-radius:0 !important; background:#111016 !important; color:#eae5f5 !important; box-shadow:none !important; }
+.friendsui-container :is(.InnerChatTab.Active,.InnerChatTab.active,.InnerChatTab.Selected,.InnerChatTab.selected,.ChatTab.active,.ChatTab.selected,.chatTab.active,.chatTab.selected) { background:var(--hs-acid) !important; color:var(--hs-ink) !important; }
+.friendsui-container .InnerChatTabLabel { color:inherit !important; font-weight:800 !important; }
+.friendsui-container ._2XZq-_f6npaQdAgeRzKIkz { background:#111016 !important; color:#eae5f5 !important; border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container ._2XZq-_f6npaQdAgeRzKIkz.Yd-DsWkYiFiYwpci--Yk_ { background:var(--hs-acid) !important; color:var(--hs-ink) !important; }
+.friendsui-container ._2XZq-_f6npaQdAgeRzKIkz .personaname { color:inherit !important; }
+.friendsui-container :is(.ChatRoomGroupDialog_header .personaname,.chatTitleBar .personaname,.VoiceRoomTitleLabels,.VoiceChatTextChannelName) { color:#efedf7 !important; }
+.friendsui-container :is(.chatHeader,.ChatRoomGroupDialog_header) :is(.personaname,.groupName,.groupChatName) { color:#efedf7 !important; text-shadow:none !important; }
+.friendsui-container :is(.ChatSpeaker,.ChatSpeaker .speaker,.ChatRoomSpeaker,.speakerName,.chatSpeaker) { color:#49347a !important; text-shadow:none !important; font-weight:750 !important; }
+.friendsui-container :is(.ChatMessageBlock,.msg,.msgText,.ChatMessageEntry,.ChatMsgSlashEmote) { color:var(--hs-ink) !important; font-family:var(--hs-font) !important; text-shadow:none !important; }
+.friendsui-container .msg { background:transparent !important; }
+.friendsui-container :is(.isCurrentUser .msgText,.isCurrentUser .speakerName) { color:#43335f !important; }
+.friendsui-container :is(.msgText a,.OpenGraphMessageURL,.ChatMessageOpenGraph_Title) { color:#54349e !important; }
+.friendsui-container :is(.ChatMessageOpenGraph,.ChatMessageInvite,.msgText .spoilerMsgText) { background:#f4f0fc !important; color:var(--hs-ink) !important; border:1px solid #74658045 !important; border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container :is(.ChatMessageOpenGraph_Description,.ChatMessageOpenGraph_Body) { color:#564b66 !important; }
+.friendsui-container :is(.ChatUnreadMessageIndicator,.unreadMessageViolator,.FriendMessageCount) { background:var(--hs-acid) !important; color:var(--hs-ink) !important; border:1px solid #18121f !important; border-radius:0 !important; }
+.friendsui-container :is(.chatEntry,.chatEntryControls,.chatEntryArea,.chatEntry input,.chatEntry textarea,.chatEntry [contenteditable="true"]) { background:#f7f4fe !important; color:var(--hs-ink) !important; background-image:none !important; border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container :is(.chatEntryControls,._3Ule3rolhZJiBN4yNNtk1s) { background:#f7f4fe !important; color:var(--hs-ink) !important; border:1px solid #75658270 !important; border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container ._113iuw_HlE_qSgt9cGWCSv { background:#f7f4fe !important; color:var(--hs-ink) !important; caret-color:var(--hs-ink) !important; }
+.friendsui-container .RVIs84dAE6wHcjH9tkinc { background:var(--hs-acid) !important; color:var(--hs-ink) !important; border:1px solid #221b2b !important; border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container .RVIs84dAE6wHcjH9tkinc svg { color:var(--hs-ink) !important; fill:var(--hs-ink) !important; }
+.friendsui-container .RVIs84dAE6wHcjH9tkinc svg :is(path,polygon) { fill:var(--hs-ink) !important; }
+.friendsui-container .RVIs84dAE6wHcjH9tkinc.jaQN2IyN4P8LZXJ6P11qy { opacity:.5; }
+.friendsui-container .chatEntry [contenteditable="true"] { caret-color:#0b0b0f !important; font-family:var(--hs-font) !important; }
+.friendsui-container :is(.chatSubmitButton,.inviteButtonJoinVoice,.inviteButtonJoinChat,.createChatRoomButton,.acceptFriendInvite) { background:var(--hs-acid) !important; color:var(--hs-ink) !important; border-radius:0 !important; border:1px solid #221b2b !important; box-shadow:none !important; }
+.friendsui-container :is(.friendListButton,.searchIconButton,.chatFileUploadBtn,.ChatBodyControls button,.activeVoiceButtons button,.VoiceControlPanelButton) { border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container :is(.friendListButton,.searchIconButton,.VoiceControlPanelButton):hover { background:var(--hs-acid) !important; color:var(--hs-ink) !important; }
+.friendsui-container :is(.ChatMessageEntryVoice,.activeVoiceControls,.activeVoiceHeader,.activeVoiceDetails,.OneOnOneVoiceMembers,.VoiceChannelParticipants) { background:#d2c9e7 !important; background-image:none !important; color:var(--hs-ink) !important; border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container :is(.activeVoiceName,.activeVoiceLabels,.OneOnOneVoiceStatusLabel,.activeVoicePushToTalk) { color:#49347a !important; }
+.friendsui-container :is(.singleWindowDivider,.BothChatsSeperator) { background:#0b0b0f !important; border:0 !important; }
+.friendsui-container :is(.DialogContent,.DialogHeader,.DialogBody,.DialogContentTransition,.contextMenu,.contextMenuContents,.friendsContextMenu) { background:#e9e4f4 !important; color:var(--hs-ink) !important; border-radius:0 !important; box-shadow:none !important; }
+.friendsui-container :is(.DialogLabel,.DialogBodyText,.DialogTitle,.contextMenuItem,.contextMenuLabel) { color:var(--hs-ink) !important; }
+.friendsui-container :is(.DialogInput,.DialogTextInputBase,.DialogDropDown) { color:var(--hs-ink) !important; background:#f5f1fd !important; border:1px solid #75658270 !important; border-radius:0 !important; }
+.friendsui-container button.DialogButton { color:var(--hs-ink) !important; background:#d8cee9 !important; border:1px solid #75658270 !important; border-radius:0 !important; }
+.friendsui-container button.DialogButton.Primary { background:var(--hs-acid) !important; }
+.friendsui-container :is(.contextMenuItem:hover,.contextMenuItem.gpfocus) { background:var(--hs-acid) !important; }
+.friendsui-container :is(button,a,input,textarea,[tabindex],[contenteditable]):focus-visible { outline:2px solid #59349b !important; outline-offset:2px !important; }
+.friendsui-container ::selection { background:var(--hs-acid); color:var(--hs-ink); }
+.friendsui-container ::-webkit-scrollbar { width:9px; height:9px; }
+.friendsui-container ::-webkit-scrollbar-track { background:#d6d1ec; }
+.friendsui-container ::-webkit-scrollbar-thumb { background:#9283ac; border:2px solid #d6d1ec; border-radius:0; }
+/* Current Steam persona component: these are the classes used in the real list. */
+.friendsui-container :is(.friend,.ChatRoomMember,.MemberListColumn) :is(.nOdcT-MoOaXGePXLyPe0H,._2saJTAocZ9TnYXTGvnqUMC) { color:var(--hs-ink) !important; text-shadow:none !important; font-family:var(--hs-font) !important; }
+.friendsui-container :is(.friend,.ChatRoomMember,.MemberListColumn) :is(._2Ri005Wg_uXDTa71kdRbcN,._1cB0qtF0paHWWyj1XNcnbG,._2Ri005Wg_uXDTa71kdRbcN a) { color:#565067 !important; text-shadow:none !important; }
+.friendsui-container .friend.ingame :is(._2Ri005Wg_uXDTa71kdRbcN,._1cB0qtF0paHWWyj1XNcnbG,._2Ri005Wg_uXDTa71kdRbcN a) { color:#24583f !important; }
+.friendsui-container .friend.online :is(._2Ri005Wg_uXDTa71kdRbcN,._1cB0qtF0paHWWyj1XNcnbG) { color:#49347a !important; }
+.friendsui-container .currentUserContainer :is(.nOdcT-MoOaXGePXLyPe0H,._2saJTAocZ9TnYXTGvnqUMC) { color:#f0edf9 !important; }
+.friendsui-container .currentUserContainer :is(._2Ri005Wg_uXDTa71kdRbcN,._1cB0qtF0paHWWyj1XNcnbG) { color:#c7c1d7 !important; }
+.friendsui-container ._2XZq-_f6npaQdAgeRzKIkz :is(.nOdcT-MoOaXGePXLyPe0H,._2Ri005Wg_uXDTa71kdRbcN,._1cB0qtF0paHWWyj1XNcnbG) { color:#f0edf9 !important; }
+.friendsui-container ._2XZq-_f6npaQdAgeRzKIkz.Yd-DsWkYiFiYwpci--Yk_ :is(.nOdcT-MoOaXGePXLyPe0H,._2Ri005Wg_uXDTa71kdRbcN,._1cB0qtF0paHWWyj1XNcnbG) { color:var(--hs-ink) !important; }
+.friendsui-container :is(.socialTabContainer,.friendsTabButtonsContainer,.tabLabel,.FriendsListTab,.socialTabSearchContainer) { background:#ded9ee !important; color:var(--hs-ink) !important; text-shadow:none !important; }
+.friendsui-container .tabLabel { font:800 12px var(--hs-font) !important; text-transform:uppercase !important; }
+.friendsui-container :is(.groupChatSectionTitle,.groupChatsHeader,.groupChatListHeader) { background:#ded9ee !important; color:var(--hs-ink) !important; box-shadow:none !important; }
+.friendsui-container :is(._1osHa9KHOmdCDNrA232z4N,._2OoTJwlWvzvAysWOOEQaXS) { display:none !important; }
+.friendsui-container :is(.friendListButton,.searchIconButton,.friendRequestButton,.addFriendButton,.friendSettingsButton,.ChatRoomAddRoomBtn,.chatAddFriendsButton) { background:var(--hs-paper) !important; color:var(--hs-ink) !important; border:1px solid #605b70a0 !important; border-radius:0 !important; box-shadow:none !important; box-sizing:border-box; }
+.friendsui-container :is(.friendListButton,.searchIconButton,.friendRequestButton,.addFriendButton,.friendSettingsButton,.ChatRoomAddRoomBtn,.chatAddFriendsButton):hover { background:var(--hs-acid) !important; color:var(--hs-ink) !important; }
+.friendsui-container :is(.friendListButton,.searchIconButton,.friendRequestButton,.addFriendButton,.friendSettingsButton,.ChatRoomAddRoomBtn,.chatAddFriendsButton) svg { fill:currentColor !important; color:var(--hs-ink) !important; }
+.friendsui-container :is(.friendListButton,.searchIconButton,.friendRequestButton,.addFriendButton,.friendSettingsButton,.ChatRoomAddRoomBtn,.chatAddFriendsButton) svg :is(path,.friendHead,.friendBody,.friendBodyFull,.friendArm) { fill:var(--hs-ink) !important; color:var(--hs-ink) !important; }
+.friendsui-container .chatEntry { padding:12px !important; gap:8px; background:#ded9ee !important; border-top:1px solid #17131e30; box-sizing:border-box; }
+.friendsui-container ._3Ule3rolhZJiBN4yNNtk1s { min-width:0; padding:0 !important; align-items:stretch; border:1px solid #605b70a0 !important; }
+.friendsui-container ._113iuw_HlE_qSgt9cGWCSv { min-width:0; margin:0 !important; padding:10px 12px !important; font:14px/1.5 var(--hs-font) !important; box-sizing:border-box; outline:none !important; box-shadow:none !important; }
+.friendsui-container ._3Ule3rolhZJiBN4yNNtk1s:focus-within { border-color:#6253ba !important; box-shadow:inset 0 0 0 1px #6253ba !important; }
+.friendsui-container .RVIs84dAE6wHcjH9tkinc { min-width:42px; max-width:42px; min-height:42px; max-height:42px; margin:0 !important; align-self:flex-end; }
+.friendsui-container :is(.Aupswi7-c-w3XwNO5cp2i,.RVIs84dAE6wHcjH9tkinc._3zOBeq5W4cNK3lRz_7aroW,.VoiceToggle) { background:var(--hs-paper) !important; color:var(--hs-ink) !important; border:1px solid #605b70a0 !important; border-radius:0 !important; box-shadow:none !important; width:42px; height:42px; box-sizing:border-box; margin:0 !important; }
+.friendsui-container :is(.Aupswi7-c-w3XwNO5cp2i,.RVIs84dAE6wHcjH9tkinc._3zOBeq5W4cNK3lRz_7aroW,.VoiceToggle):hover { background:var(--hs-acid) !important; }
+.friendsui-container :is(.Aupswi7-c-w3XwNO5cp2i,.VoiceToggle) svg { color:var(--hs-ink) !important; fill:currentColor !important; }
+.friendsui-container :is(.Aupswi7-c-w3XwNO5cp2i,.VoiceToggle) svg path { fill:var(--hs-ink) !important; }
+.friendsui-container .VoiceToggle.Active { background:var(--hs-acid) !important; }
+.friendsui-container :is(._2WfNoLBdfKwyutA6ho4aSH,.W0OhkJtz8zMUW8Mhu0BMO) { gap:8px !important; background:transparent !important; }
+.friendsui-container ._2WfNoLBdfKwyutA6ho4aSH { padding:0 !important; margin:0 !important; box-shadow:none !important; }
+.friendsui-container .friend .nOdcT-MoOaXGePXLyPe0H { font-size:14px !important; line-height:1.25 !important; }
+.friendsui-container .friend ._2Ri005Wg_uXDTa71kdRbcN { font-size:12px !important; line-height:1.25 !important; }
+.friendsui-container .VoiceToggle { min-width:42px; max-width:42px; display:flex; align-items:center; justify-content:center; }
+.friendsui-container .msg.timeDivision { color:#565067 !important; font-size:11px !important; text-shadow:none !important; }
+.friendsui-container :is(.ChatHistoryContainer,.chatHistory) { box-shadow:none !important; }
+/* Compact native friends window: window controls, profile and lists have their
+   own rows. Keep native friends, presence, searching and group toggles intact. */
+.friendsui-container .friendListHeaderContainer { padding-top:32px !important; min-height:0 !important; box-sizing:border-box; }
+.friendsui-container .friendListHeaderContainer .title-area { height:28px !important; top:0 !important; background:transparent !important; }
+.friendsui-container .friendListHeaderContainer .currentUserContainer { position:relative !important; width:100% !important; min-width:0 !important; padding:0 !important; box-sizing:border-box; }
+.friendsui-container .friendListHeaderContainer .AvatarAndUser { display:flex !important; align-items:center !important; padding:12px !important; min-height:68px; box-sizing:border-box; gap:12px; }
+.friendsui-container .friendListHeaderContainer .currentUserAvatar { flex:none; width:40px !important; height:40px !important; }
+.friendsui-container .friendListHeaderContainer .currentUserAvatar :is(.avatarHolder,.avatarFrame) { width:40px !important; height:40px !important; }
+.friendsui-container .friendListHeaderContainer .currentUserContainer .labelHolder { display:flex !important; flex:1 1 0 !important; min-width:0 !important; margin:0 22px 0 0 !important; opacity:1 !important; visibility:visible !important; justify-content:center; }
+.friendsui-container .currentUserContainer ._4ZTzGZ5TTgFyfw1DcXLXS { display:flex !important; min-width:0; margin-bottom:3px !important; }
+.friendsui-container .currentUserContainer .nOdcT-MoOaXGePXLyPe0H { font:750 14px/1.3 var(--hs-font) !important; min-width:0; }
+.friendsui-container .currentUserContainer ._2Ri005Wg_uXDTa71kdRbcN { font:12px/1.4 var(--hs-font) !important; margin:0 !important; }
+.friendsui-container .friendListButtons { top:52px !important; right:10px !important; }
+.friendsui-container .quickAccessFriends:not(.emptyQuickAccess) { display:flex !important; flex-wrap:nowrap !important; gap:8px; width:100% !important; margin:0 !important; padding:8px 12px 10px !important; box-sizing:border-box; overflow-x:auto; overflow-y:hidden; border-top:1px solid #ffffff14; background:#16151c !important; }
+.friendsui-container .quickAccessFriends .favoriteElement { flex:0 0 38px; min-width:38px; height:auto !important; }
+.friendsui-container .quickAccessFriends .friend.quickAccessFriend { width:36px !important; margin:0 !important; }
+.friendsui-container .quickAccessFriends .friend.quickAccessFriend .avatarHolder { width:34px !important; height:34px !important; transform:none !important; }
+.friendsui-container .quickAccessFriends .friend.quickAccessFriend .avatar { width:34px !important; height:34px !important; }
+.friendsui-container .quickAccessFriends .playerNameQuickAccessContainer { display:none !important; }
+.friendsui-container .quickAccessFriends .FavoriteFriend_GameIcon { width:14px !important; height:14px !important; right:-2px; bottom:-2px; }
+.friendsui-container .socialTabSearchContainer { border:0 !important; border-top:1px solid #0b0b0f20 !important; background:#e4e2ee !important; }
+.friendsui-container .socialTabContainer { background:#e4e2ee !important; }
+.friendsui-container .socialListTab { min-width:0; height:40px !important; margin:0 !important; padding:0 10px 0 12px !important; box-sizing:border-box; background:transparent !important; color:#0b0b0f !important; align-items:center; }
+.friendsui-container .socialListTab .tabLabel { background:transparent !important; color:inherit !important; line-height:1.3 !important; }
+.friendsui-container .friendsTabButtonsContainer { background:transparent !important; align-items:center; gap:5px; padding:0 0 0 10px !important; }
+.friendsui-container .friendsTabButtonsContainer :is(.friendRequestButton,.addFriendButton,.searchIconButton) { width:26px !important; height:26px !important; min-width:26px; padding:3px !important; margin:0 !important; }
+.friendsui-container .friendsTabButtonsContainer .TabSearchButton { min-width:24px; align-items:center; }
+.friendsui-container .friendlistListContainer { background:#d6d1ec !important; padding:0 6px !important; box-sizing:border-box; }
+.friendsui-container .friendlistListContainer .friendGroup { border:0 !important; padding:4px 0 8px !important; }
+.friendsui-container .friendlistListContainer .friendGroup+.friendGroup { border-top:1px solid #0b0b0f20 !important; }
+.friendsui-container .friendlistListContainer .groupName { padding:10px 8px 7px !important; font:800 11px/1.4 var(--hs-font) !important; letter-spacing:.05em !important; text-transform:uppercase; color:#393147 !important; }
+.friendsui-container .friendlistListContainer .friend:not(.avatarOnly) { min-height:48px; padding:5px 7px !important; margin:2px 0 !important; box-sizing:border-box; border:1px solid transparent; }
+.friendsui-container .friendlistListContainer .friend:hover { border-color:#0b0b0f22; }
+.friendsui-container .friendlistListContainer .friend .labelHolder { height:auto !important; padding:0 !important; margin:0 0 0 9px !important; }
+.friendsui-container .friendlistListContainer .friend .nOdcT-MoOaXGePXLyPe0H { font-weight:650 !important; font-size:13px !important; }
+.friendsui-container .friendlistListContainer .friend ._2Ri005Wg_uXDTa71kdRbcN { font-size:11px !important; margin-top:3px; }
+.friendsui-container :is(.friendListFooter,.FriendsListChatSection) .friendsListSectionTitle.chatSectionTitle { width:100%; height:40px !important; padding:0 8px !important; align-items:center; box-sizing:border-box; background:#0c0c10 !important; border:0 !important; border-top:2px solid var(--hs-acid) !important; color:#f0edf9 !important; }
+.friendsui-container :is(.friendListFooter,.FriendsListChatSection) .groupChatSectionTitle { padding:0 !important; background:transparent !important; color:#f0edf9 !important; font:800 11px/1.4 var(--hs-font) !important; }
+.friendsui-container :is(.friendListFooter,.FriendsListChatSection) .createChatRoomButton { height:26px !important; width:26px !important; padding:3px !important; margin:0 !important; display:flex; align-items:center; justify-content:center; box-sizing:border-box; }
+.friendsui-container :is(.friendListFooter,.FriendsListChatSection) .ToggleGroupChatList { align-self:center; margin:0 8px 0 0; }
+
+.friendsui-container .FriendsListChatSection .voiceRoomDragBar { align-items:center !important; min-width:0; flex:1; width:auto !important; background:transparent !important; }
+/* HYPERSHIFT vector icons. Only presentation changes; native SVG elements and handlers remain. */
+:is(.hypershift-on,.friendsui-container) {
+--hs-icon-download:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22M12%203v12m-5-5%205%205%205-5M4%2017v4h16v-4%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-search:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Ccircle%20cx%3D%2210.5%22%20cy%3D%2210.5%22%20r%3D%226.5%22%2F%3E%3Cpath%20d%3D%22m16%2016%205%205%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-friends:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%227%22%20r%3D%223%22%2F%3E%3Cpath%20d%3D%22M3%2021v-3a6%206%200%200%201%2012%200v3M17%204a3%203%200%200%201%200%206m1%204a5%205%200%200%201%203%204v3%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-add-friend:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%227%22%20r%3D%223%22%2F%3E%3Cpath%20d%3D%22M2%2021v-3a6%206%200%200%201%2012%200v3m4-15v8m-4-4h8%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-requests:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%227%22%20r%3D%223%22%2F%3E%3Cpath%20d%3D%22M2%2021v-3a6%206%200%200%201%2010-4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2217%22%20r%3D%224%22%2F%3E%3Cpath%20d%3D%22M18%2015v2l1%201%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-group-add:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22M4%204h12v10H9l-5%204V4m13%200h3v7m-2%204v7m-3-3.5h7%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-gear:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22m9%203%206%200%20.7%203%202.3%201%202.7-1.3%203%205.2-2.3%202%20.3%202.5L23%2018l-3%205.2-3-1-2%201.5-.6%203H8.6l-.6-3-2-1.5-3%201L0%2018l2.3-2.6.3-2.5-2.3-2%203-5.2L6%207l2.3-1Z%22%20transform%3D%22translate%283%201%29%20scale%28.75%29%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-plus:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22M12%204v16M4%2012h16%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-bell:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22M5%2017h14l-2-3V9a5%205%200%200%200-10%200v5l-2%203m5%203h4%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-megaphone:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22M3%209h5l11-5v16L8%2015H3V9m5%206%202%206H6l-2-6m18-6v6%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-monitor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22M3%204h18v13H3V4m9%2013v4m-4%200h8%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-pause:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22M8%204v16M16%204v16%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-play:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22m7%204%2013%208-13%208V4Z%22%2F%3E%3C%2Fsvg%3E");
+--hs-icon-close:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Cpath%20d%3D%22m6%206%2012%2012M18%206%206%2018%22%2F%3E%3C%2Fsvg%3E");
+}
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_Download) { --hs-icon:var(--hs-icon-download); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_MagnifyingGlass) { --hs-icon:var(--hs-icon-search); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_FriendIcon,.SVGIcon_Group) { --hs-icon:var(--hs-icon-friends); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_AddFriend,.SVGIcon_InviteFriend) { --hs-icon:var(--hs-icon-add-friend); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_FriendRequest) { --hs-icon:var(--hs-icon-requests); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_NewChatGroup) { --hs-icon:var(--hs-icon-group-add); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_Settings,.SVGIcon_ChatSettings) { --hs-icon:var(--hs-icon-gear); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_PlusCircle) { --hs-icon:var(--hs-icon-plus); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_Bell) { --hs-icon:var(--hs-icon-bell); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_BigPicture) { --hs-icon:var(--hs-icon-monitor); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_Pause) { --hs-icon:var(--hs-icon-pause); }
+:is(.hypershift-on,.friendsui-container) svg:is(.SVGIcon_Play,.SVGIcon_ReadyToPlay) { --hs-icon:var(--hs-icon-play); }
+
+.hypershift-on .hs-live-footer ._1TdaAqMFadi0UTqilrkelR svg { --hs-icon:var(--hs-icon-friends); }
+.hypershift-on .hs-live-footer ._2foCkpRXhqq0UGVE50BWqj svg { --hs-icon:var(--hs-icon-plus); }
+.friendsui-container .friendRequestButton svg { --hs-icon:var(--hs-icon-requests); }
+.friendsui-container .createChatRoomButton svg { --hs-icon:var(--hs-icon-group-add); }
+.hypershift-on ._25orrwWG_3Sxt7Cez3seLV svg,.hypershift-on .lzk4zNVWG2zPV5Mk_o5GL svg { --hs-icon:var(--hs-icon-gear); }
+.hypershift-on ._5wILZhsLODVwGfcJ0hKmJ svg._34bQcTHo5QKzuujoEyU1tm { --hs-icon:var(--hs-icon-megaphone); }
+.hypershift-on ._3mGEzzp18imtSzGPkduedi svg._34bQcTHo5QKzuujoEyU1tm { --hs-icon:var(--hs-icon-bell); }
+.hypershift-on ._5wILZhsLODVwGfcJ0hKmJ ._1B_GY6Ybp1MERAoz73-3um { display:none !important; }
+:is(.hypershift-on,.friendsui-container) :is(svg:is(.SVGIcon_Download,.SVGIcon_MagnifyingGlass,.SVGIcon_FriendIcon,.SVGIcon_Group,.SVGIcon_AddFriend,.SVGIcon_InviteFriend,.SVGIcon_FriendRequest,.SVGIcon_NewChatGroup,.SVGIcon_Settings,.SVGIcon_ChatSettings,.SVGIcon_PlusCircle,.SVGIcon_Bell,.SVGIcon_BigPicture,.SVGIcon_Pause,.SVGIcon_Play,.SVGIcon_ReadyToPlay),.hs-live-footer ._1TdaAqMFadi0UTqilrkelR svg,.hs-live-footer ._2foCkpRXhqq0UGVE50BWqj svg,.friendRequestButton svg,.createChatRoomButton svg,._25orrwWG_3Sxt7Cez3seLV svg,.lzk4zNVWG2zPV5Mk_o5GL svg,._5wILZhsLODVwGfcJ0hKmJ svg._34bQcTHo5QKzuujoEyU1tm,._3mGEzzp18imtSzGPkduedi svg._34bQcTHo5QKzuujoEyU1tm) {
+ width:20px !important; height:20px !important; min-width:20px; padding:0 !important; margin:0 !important; flex:none;
+ background:currentColor !important; -webkit-mask:var(--hs-icon) center/contain no-repeat !important; mask:var(--hs-icon) center/contain no-repeat !important;
+}
+:is(.hypershift-on,.friendsui-container) :is(svg:is(.SVGIcon_Download,.SVGIcon_MagnifyingGlass,.SVGIcon_FriendIcon,.SVGIcon_Group,.SVGIcon_AddFriend,.SVGIcon_InviteFriend,.SVGIcon_FriendRequest,.SVGIcon_NewChatGroup,.SVGIcon_Settings,.SVGIcon_ChatSettings,.SVGIcon_PlusCircle,.SVGIcon_Bell,.SVGIcon_BigPicture,.SVGIcon_Pause,.SVGIcon_Play,.SVGIcon_ReadyToPlay),.hs-live-footer ._1TdaAqMFadi0UTqilrkelR svg,.hs-live-footer ._2foCkpRXhqq0UGVE50BWqj svg,.friendRequestButton svg,.createChatRoomButton svg,._25orrwWG_3Sxt7Cez3seLV svg,.lzk4zNVWG2zPV5Mk_o5GL svg,._5wILZhsLODVwGfcJ0hKmJ svg._34bQcTHo5QKzuujoEyU1tm,._3mGEzzp18imtSzGPkduedi svg._34bQcTHo5QKzuujoEyU1tm)>* { opacity:0 !important; }
+.friendsui-container .friendsTabButtonsContainer :is(svg:is(.SVGIcon_Download,.SVGIcon_MagnifyingGlass,.SVGIcon_FriendIcon,.SVGIcon_Group,.SVGIcon_AddFriend,.SVGIcon_InviteFriend,.SVGIcon_FriendRequest,.SVGIcon_NewChatGroup,.SVGIcon_Settings,.SVGIcon_ChatSettings,.SVGIcon_PlusCircle,.SVGIcon_Bell,.SVGIcon_BigPicture,.SVGIcon_Pause,.SVGIcon_Play,.SVGIcon_ReadyToPlay),.hs-live-footer ._1TdaAqMFadi0UTqilrkelR svg,.hs-live-footer ._2foCkpRXhqq0UGVE50BWqj svg,.friendRequestButton svg,.createChatRoomButton svg,._25orrwWG_3Sxt7Cez3seLV svg,.lzk4zNVWG2zPV5Mk_o5GL svg,._5wILZhsLODVwGfcJ0hKmJ svg._34bQcTHo5QKzuujoEyU1tm,._3mGEzzp18imtSzGPkduedi svg._34bQcTHo5QKzuujoEyU1tm) { width:18px !important; height:18px !important; min-width:18px; }
+
+.friendsui-container .friendsTabButtonsContainer :is(.searchIconButton,.friendRequestButton,.addFriendButton),
+.friendsui-container .createChatRoomButton { display:flex !important; align-items:center !important; justify-content:center !important; border:1px solid #73698280 !important; }
+.friendsui-container .createChatRoomButton { background:var(--hs-acid) !important; color:var(--hs-ink) !important; }
+.friendsui-container .createChatRoomButton svg { color:var(--hs-ink) !important; }
+.hypershift-on ._1VNuYHM6BPBOJspC6zPf5r ._31Ig9HzlsHvYWo5VyjppMY ._3oavRVhIS9tC3vBsFT4Ggi svg { width:20px !important; height:20px !important; min-width:20px; margin:0 !important; }
+.hypershift-on ._3Z7VQ1IMk4E3HsHvrkLNgo svg:is(.SVGIcon_Bell,.SVGIcon_BigPicture) { color:#e4e2ee !important; }
+.hypershift-on ._3Z7VQ1IMk4E3HsHvrkLNgo ._34bQcTHo5QKzuujoEyU1tm { color:#e4e2ee !important; }
+.hypershift-on ._3Z7VQ1IMk4E3HsHvrkLNgo :is(._2Szzh5sKyGgnLUR870zbDE:hover,._1oEwirQksXfZ-3RWWslbAR) ._34bQcTHo5QKzuujoEyU1tm { color:var(--hs-acid) !important; }
+
+.friendsui-container .friendListHeaderContainer::before { content:""; position:absolute; left:10px; top:4px; display:block; z-index:4; pointer-events:none; padding:0; width:146px; height:26px; background-image:url("data:image/png;base64,__HYPERSHIFT_ATLAS__");background-size:688.06584362% 2188.37209302%;background-position:1.46955913% 0.77951002%; }
+
+.friendsui-container .friendListHeaderContainer::after { content:""; position:absolute; left:0; top:0; width:190px; height:34px; z-index:1; background:#d6d1ec; clip-path:polygon(0 0,100% 0,calc(100% - 25px) 100%,0 100%); pointer-events:none; }

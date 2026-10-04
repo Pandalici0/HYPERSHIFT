@@ -1,0 +1,12 @@
+dist/
+node_modules/
+__pycache__/
+*.py[cod]
+test-results/
+playwright-report/
+.env
+.env.*
+*.log
+*.zip
+.DS_Store
+Thumbs.db

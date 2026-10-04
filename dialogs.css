@@ -1,0 +1,27 @@
+/* HYPERSHIFT — ash/lavender, ink and acid yellow. */
+:root { --hs-paper:#e4e2ee; --hs-sidebar:#d6d1ec; --hs-ink:#0b0b0f; --hs-muted:#565564; --hs-acid:#e5f838; --hs-line:#17131e30; --hs-font:"Segoe UI",Arial,sans-serif; --hs-display:Impact,"Arial Black",sans-serif; }
+body { font-family:var(--hs-font); color:var(--hs-ink); }
+.DialogContent,.DialogContentTransition,.DialogBody,.DialogHeader { background:var(--hs-paper) !important; color:var(--hs-ink) !important; }
+.DialogLabel,.DialogBodyText,.DialogHeader,.DialogTitle { color:var(--hs-ink) !important; }
+button.DialogButton,.DialogDropDown { color:var(--hs-ink) !important; background:#f0eef8 !important; border:1px solid var(--hs-line) !important; border-radius:0 !important; box-shadow:none !important; }
+button.DialogButton:hover { background:#d8d3ef !important; }
+button.DialogButton.Primary { background:var(--hs-acid) !important; color:var(--hs-ink) !important; border-color:var(--hs-ink) !important; }
+.DialogInput,.DialogTextInputBase { background:#f1edf9 !important; color:var(--hs-ink) !important; border:1px solid var(--hs-line) !important; border-radius:0 !important; }
+.DialogInput::placeholder,.DialogTextInputBase::placeholder { color:var(--hs-muted) !important; font-style:normal !important; }
+.contextMenu,.contextMenuContents { background:#efedf7 !important; color:var(--hs-ink) !important; border:1px solid var(--hs-ink) !important; border-radius:0 !important; box-shadow:4px 4px 0 #0003 !important; }
+.contextMenuItem { color:var(--hs-ink) !important; border-radius:0 !important; }
+.contextMenuItem:hover { background:var(--hs-acid) !important; }
+button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visible { outline:2px solid #6253ba !important; outline-offset:3px; }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+
+/* Native Steam root-menu popups also live in separate Menu windows.
+   These module classes are present in both the main client and popup DOM. */
+._3pofGqV0buiKAfMPEs3_82.contextMenuContents,._3pofGqV0buiKAfMPEs3_82 { box-sizing:border-box; padding:8px !important; background:#101015 !important; background-image:none !important; color:#efedf7 !important; border:1px solid #655471 !important; border-top:3px solid #e5f838 !important; border-radius:0 !important; box-shadow:6px 6px 0 #17131e66 !important; min-width:min(260px,calc(100vw - 24px)); max-width:100%; font-family:"Segoe UI",Arial,sans-serif !important; }
+._3pofGqV0buiKAfMPEs3_82 ._2jXHP0742MyApMUVUM8IFn._2uiDecKkKjAq7nimy3uLhG { box-sizing:border-box; position:relative; min-width:0 !important; min-height:40px; padding:11px 16px 11px 20px !important; margin:2px 0; color:#efedf7 !important; background:#1b1622 !important; border:1px solid #352b40 !important; border-radius:0 !important; font:650 13px/1.4 "Segoe UI",Arial,sans-serif !important; letter-spacing:.01em; white-space:normal !important; overflow-wrap:break-word; text-shadow:none !important; transition:background-color .12s ease,color .12s ease; }
+._3pofGqV0buiKAfMPEs3_82 ._2uiDecKkKjAq7nimy3uLhG:not(.disabled):not(.d8GPmAyQdRQwoHiPbc8Js):is(:hover,:focus-visible,.gpfocus,.contextMenuItemHover) { background:#e5f838 !important; color:#101015 !important; border-color:#e5f838 !important; box-shadow:inset 4px 0 #101015; }
+._3pofGqV0buiKAfMPEs3_82 ._2uiDecKkKjAq7nimy3uLhG:focus-visible { outline:2px solid #e5f838 !important; outline-offset:1px; }
+._3pofGqV0buiKAfMPEs3_82 ._2uiDecKkKjAq7nimy3uLhG:is(.disabled,.d8GPmAyQdRQwoHiPbc8Js) { color:#a99bb7 !important; background:#17131e !important; border-color:#302837 !important; cursor:default; }
+._3pofGqV0buiKAfMPEs3_82 ._21GPYlKBCLsHQpTsHw_RL_ { min-width:0 !important; height:1px !important; margin:8px 6px !important; padding:0 !important; background:#655471 !important; border:0 !important; opacity:.65; }
+._3pofGqV0buiKAfMPEs3_82 ._3EvKu7VyTGMoDtbyugKQ5H { background:#e5f838 !important; color:#101015 !important; border-radius:0 !important; padding:2px 5px; font-size:10px; font-weight:850; margin-right:8px; }
+
+.contextMenu:has(._3pofGqV0buiKAfMPEs3_82) { background:#101015 !important; border:0 !important; border-radius:0 !important; box-shadow:none !important; }

@@ -1,0 +1,3 @@
+/* Dark gamepad surfaces with HYPERSHIFT action colors. */
+:root { --gpBackground-DarkMedium:#101015; --gpBackground-DarkSoft:#18151f; --gpColor-Green:#e5f838; }
+button:focus-visible { outline-color:#e5f838 !important; }

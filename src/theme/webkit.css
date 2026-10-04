@@ -1,0 +1,4 @@
+/* Store/community content retains its own contrast; bold acid actions. */
+.btn_green_white_innerfade,.btn_green_steamui,.btnv6_green_white_innerfade { background:#e5f838 !important; border-radius:0 !important; }
+.btn_green_white_innerfade>span,.btn_green_steamui>span,.btnv6_green_white_innerfade>span { background:transparent !important; color:#0b0b0f !important; }
+.game_purchase_action,.store_nav { border-radius:0 !important; }

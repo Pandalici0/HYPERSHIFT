@@ -1,0 +1,101 @@
+{
+  "name": "HYPERSHIFT",
+  "author": "pandalici0",
+  "version": "1.6.4",
+  "description": "HYPERSHIFT: library and game details, login, downloads, friends/chat, Millennium settings, notifications and desktop in-game overlay.",
+  "tags": [
+    "Light",
+    "Library",
+    "Customizable"
+  ],
+  "Steam-WebKit": "webkit.css",
+  "Patches": [
+    {
+      "MatchRegexString": "^Steam$",
+      "TargetCss": "libraryroot.custom.css",
+      "TargetJs": "libraryroot.custom.js"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "friends.custom.css"
+    },
+    {
+      "MatchRegexString": "^Steam Big Picture Mode$|^QuickAccess_|^MainMenu_",
+      "TargetCss": "bigpicture.custom.css"
+    },
+    {
+      "MatchRegexString": ".ModalDialogPopup|Menu$|Supernav$|^notificationtoasts_",
+      "TargetCss": "dialogs.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "settings.custom.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "notifications.custom.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "overlay.custom.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "login.custom.css"
+    }
+  ],
+  "Conditions": {
+    "Bibliotheksstart": {
+      "tab": "HYPERSHIFT",
+      "description": "HYPERSHIFT-Startseite oder native Steam-Startseite.",
+      "default": "An",
+      "values": {
+        "An": {
+          "TargetCss": {
+            "affects": [
+              "^Steam$"
+            ],
+            "src": "dashboard-on.css"
+          }
+        },
+        "Aus": {
+          "TargetCss": {
+            "affects": [
+              "^Steam$"
+            ],
+            "src": "dashboard-off.css"
+          }
+        }
+      }
+    },
+    "Kopfzeile": {
+      "tab": "HYPERSHIFT",
+      "description": "Kantige Hauptnavigation oder eine zweite Zeile.",
+      "default": "HYPERSHIFT",
+      "values": {
+        "HYPERSHIFT": {
+          "TargetCss": {
+            "affects": [
+              "^Steam$"
+            ],
+            "src": "header-hypershift.css"
+          }
+        },
+        "Zwei Zeilen": {
+          "TargetCss": {
+            "affects": [
+              "^Steam$"
+            ],
+            "src": "header-classic.css"
+          }
+        }
+      }
+    }
+  },
+  "github": {
+    "owner": "pandalici0",
+    "repo_name": "HYPERSHIFT"
+  },
+  "header_image": "https://raw.githubusercontent.com/pandalici0/HYPERSHIFT/main/docs/images/library.png",
+  "splash_image": "https://raw.githubusercontent.com/pandalici0/HYPERSHIFT/main/docs/images/library.png"
+}

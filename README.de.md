@@ -6,7 +6,7 @@ Lavendel, Schwarz und Acid-Gelb. Große Schrift, klare Kontraste und kantige Fl�
 
 [English](README.md) · [Installation](docs/INSTALLATION.md) · [Änderungen](CHANGELOG.md) · [Downloads](https://github.com/pandalici0/HYPERSHIFT/releases)
 
-![HYPERSHIFT Bibliotheksvorschau](docs/images/library.png)
+![HYPERSHIFT — Next Level](docs/images/promo/01-cover.jpg)
 
 ## Enthalten
 
@@ -47,11 +47,21 @@ node --check libraryroot.custom.js
 
 ## Vorschauen und Kompatibilität
 
+| Bibliothek | Spieldetails |
+| --- | --- |
+| ![Bibliothek](docs/images/promo/02-library.jpg) | ![Spieldetails](docs/images/promo/03-game-details.jpg) |
+
+| Freunde & Chat | Downloads |
+| --- | --- |
+| ![Freunde und Chat](docs/images/promo/04-friends-chat.jpg) | ![Downloads](docs/images/promo/05-downloads.jpg) |
+
+[Vollständige Galerie und Bildformate](docs/PREVIEWS.md). Alle Motive sind als PNG und JPG enthalten.
+
 ![Native Spieleigenschaften](docs/images/properties.png)
 
 Neu in 1.7.0: native Steam-Einstellungen, Spieleigenschaften und weitere Fenster. Diese Vorschau ist ein lokaler Testaufbau mit Steams Original-CSS.
 
-Die Vorschauen verwenden lokale Testoberflächen mit Beispieldaten. Das bestätigte Design stammt aus 1.6.3; 1.6.4 übernimmt es und ermittelt Bibliotheksdaten während der Laufzeit aus Steam.
+Die aktualisierten Vorschauen zeigen HYPERSHIFT 1.7.2 anhand lokaler UI-Modelle mit Beispieldaten. Sie enthalten keine privaten Kontaktlisten oder echten Chatverläufe. Die Werbemotive rahmen diese Screenshots ein; Spielebilder und Marken gehören ihren jeweiligen Rechteinhabern.
 
 Entwickelt für den Windows-Steam-Desktop und Millennium 3.5.0. Zusätzliche Theme-Texte sind derzeit deutsch; Steams eigene Texte verwenden dessen eingestellte Sprache. Shop/Community erhalten Aktionsakzente. Big Picture bekommt Farbakzente und kein vollständiges Desktop-Layout.
 

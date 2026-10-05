@@ -1,0 +1,80 @@
+{
+  "theme": "HYPERSHIFT",
+  "version": "1.7.2",
+  "author": "pandalici0",
+  "captureType": "Local UI models with current theme CSS and example data",
+  "images": [
+    {
+      "name": "01-cover",
+      "width": 1920,
+      "height": 1080,
+      "files": [
+        "01-cover.png",
+        "01-cover.jpg"
+      ]
+    },
+    {
+      "name": "02-library",
+      "width": 1920,
+      "height": 1080,
+      "files": [
+        "02-library.png",
+        "02-library.jpg"
+      ]
+    },
+    {
+      "name": "03-game-details",
+      "width": 1920,
+      "height": 1080,
+      "files": [
+        "03-game-details.png",
+        "03-game-details.jpg"
+      ]
+    },
+    {
+      "name": "04-friends-chat",
+      "width": 1920,
+      "height": 1080,
+      "files": [
+        "04-friends-chat.png",
+        "04-friends-chat.jpg"
+      ]
+    },
+    {
+      "name": "05-downloads",
+      "width": 1920,
+      "height": 1080,
+      "files": [
+        "05-downloads.png",
+        "05-downloads.jpg"
+      ]
+    },
+    {
+      "name": "06-settings",
+      "width": 1920,
+      "height": 1080,
+      "files": [
+        "06-settings.png",
+        "06-settings.jpg"
+      ]
+    },
+    {
+      "name": "github-social-1280x640",
+      "width": 1280,
+      "height": 640,
+      "files": [
+        "github-social-1280x640.png",
+        "github-social-1280x640.jpg"
+      ]
+    },
+    {
+      "name": "social-card-1200x630",
+      "width": 1200,
+      "height": 630,
+      "files": [
+        "social-card-1200x630.png",
+        "social-card-1200x630.jpg"
+      ]
+    }
+  ]
+}

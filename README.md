@@ -6,7 +6,7 @@ Lavender surfaces. Black panels. Acid-yellow actions. Oversized typography and s
 
 [Deutsch](README.de.md) · [Installation](docs/INSTALLATION.md) · [Changes](CHANGELOG.md) · [Download releases](https://github.com/pandalici0/HYPERSHIFT/releases)
 
-![HYPERSHIFT library preview](docs/images/library.png)
+![HYPERSHIFT — Next Level](docs/images/promo/01-cover.jpg)
 
 ## What is included
 
@@ -33,6 +33,16 @@ The repository also has ready-built files: a clone or source archive can be plac
 
 ## More previews
 
+| Library | Game details |
+| --- | --- |
+| ![Library showcase](docs/images/promo/02-library.jpg) | ![Game details showcase](docs/images/promo/03-game-details.jpg) |
+
+| Friends & chat | Downloads |
+| --- | --- |
+| ![Friends and chat showcase](docs/images/promo/04-friends-chat.jpg) | ![Downloads showcase](docs/images/promo/05-downloads.jpg) |
+
+[Full preview gallery and image sizes](docs/PREVIEWS.md). PNG originals and lighter JPG versions are included.
+
 ![Native Steam game properties](docs/images/properties.png)
 
 New in 1.7.0: native Steam properties/settings and auxiliary windows. This preview uses a local fixture with the installed Steam CSS.
@@ -45,7 +55,7 @@ New in 1.7.0: native Steam properties/settings and auxiliary windows. This previ
 | --- | --- |
 | ![Friends list](docs/images/friends.png) | ![Chat](docs/images/chat.png) |
 
-Previews are local UI test fixtures with example data, not captures of private accounts. The screenshots show the established 1.6.3 design; 1.6.4 replaces local development metadata with runtime discovery without redesigning it.
+The updated previews use HYPERSHIFT 1.7.2 styles in local UI models with example data. They are not captures of private accounts; game artwork and trademarks belong to their owners. Promotional layouts frame the same screenshots without inventing additional controls.
 
 ## Development
 

@@ -57,11 +57,7 @@ node --check libraryroot.custom.js
 
 [Vollständige Galerie und Bildformate](docs/PREVIEWS.md). Alle Motive sind als PNG und JPG enthalten.
 
-![Native Spieleigenschaften](docs/images/properties.png)
-
-Neu in 1.7.0: native Steam-Einstellungen, Spieleigenschaften und weitere Fenster. Diese Vorschau ist ein lokaler Testaufbau mit Steams Original-CSS.
-
-Die aktualisierten Vorschauen zeigen HYPERSHIFT 1.7.2 anhand lokaler UI-Modelle mit Beispieldaten. Sie enthalten keine privaten Kontaktlisten oder echten Chatverläufe. Die Werbemotive rahmen diese Screenshots ein; Spielebilder und Marken gehören ihren jeweiligen Rechteinhabern.
+Alle Galerie-Bilder sind echte Aufnahmen aus dem laufenden Windows-Steam mit HYPERSHIFT 1.7.2 vom 6. Oktober 2026. Kontaktnamen und fremde Avatare sind sichtbar abgedeckt. Chat und Download-Warteschlange waren bei der Aufnahme leer. Die Werberahmen verändern die aufgenommene Oberfläche nicht. Spielebilder und Marken gehören ihren jeweiligen Rechteinhabern.
 
 Entwickelt für den Windows-Steam-Desktop und Millennium 3.5.0. Zusätzliche Theme-Texte sind derzeit deutsch; Steams eigene Texte verwenden dessen eingestellte Sprache. Shop/Community erhalten Aktionsakzente. Big Picture bekommt Farbakzente und kein vollständiges Desktop-Layout.
 

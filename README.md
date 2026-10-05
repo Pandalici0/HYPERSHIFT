@@ -43,19 +43,11 @@ The repository also has ready-built files: a clone or source archive can be plac
 
 [Full preview gallery and image sizes](docs/PREVIEWS.md). PNG originals and lighter JPG versions are included.
 
-![Native Steam game properties](docs/images/properties.png)
-
-New in 1.7.0: native Steam properties/settings and auxiliary windows. This preview uses a local fixture with the installed Steam CSS.
-
-| Game details | Steam menu |
-| --- | --- |
-| ![Game detail layout](docs/images/game-details.png) | ![Custom Steam menu](docs/images/steam-menu.png) |
-
 | Friends | Chat |
 | --- | --- |
-| ![Friends list](docs/images/friends.png) | ![Chat](docs/images/chat.png) |
+| ![Actual friends window](docs/images/friends.png) | ![Actual chat window](docs/images/chat.png) |
 
-The updated previews use HYPERSHIFT 1.7.2 styles in local UI models with example data. They are not captures of private accounts; game artwork and trademarks belong to their owners. Promotional layouts frame the same screenshots without inventing additional controls.
+All gallery images are screenshots from the running Windows Steam client with HYPERSHIFT 1.7.2, captured on 6 October 2026. Contact names and third-party avatars are visibly masked. The chat was empty and the download queue was empty at capture time. The promotional frames do not change the captured interface. Game artwork and trademarks belong to their owners.
 
 ## Development
 

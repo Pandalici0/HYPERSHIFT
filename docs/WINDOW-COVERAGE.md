@@ -24,7 +24,7 @@ Actions remain Steam actions. No additional JavaScript is injected for these win
 - Navigation, toggles including native pseudo-elements, dropdowns, inputs, primary/disabled actions and all three window-control hit targets.
 - Selected server/storage/cloud rows and unchanged 40px example virtual-row geometry.
 - Library regression tests with the new stylesheet loaded alongside the main theme.
-- Previews use synthetic example data, not private accounts or system reports.
+- Automated tests use synthetic fixtures. Public previews use live Steam captures, with contact names and third-party avatars visibly masked.
 
 These checks use local DOM fixtures and selectors from the installed client. They are not live tests of every account, hardware, login, recording or game state. Reopen existing popup windows after reloading the theme, then report any remaining unstyled area with a screenshot.
 

@@ -1,6 +1,8 @@
 HYPERSHIFT for Millennium by **pandalici0**.
 
-New in 1.7.0: native Steam settings, game properties and auxiliary desktop windows, including storage, installation/cloud dialogs, server browser and media controls.
+New in 1.7.1: complete download artwork, separate readable progress tracks and dark nested notification text.
+
+Added in 1.7.0: native Steam settings, game properties and auxiliary desktop windows, including storage, installation/cloud dialogs, server browser and media controls.
 
 Lavender, black and acid-yellow styling for Steam desktop: library, game details, downloads, friends/chat, login, settings, notifications, desktop overlay and animated menus.
 

@@ -54,7 +54,7 @@ The original 1.6.3 development also exercised library geometry at eight desktop 
 1. Update the version in `skin.json` and the changelog.
 2. Rebuild and run checks. Update documentation/download names and previews if appropriate.
 3. Commit the generated runtime files with their templates.
-4. Push a tag matching `v<version>`, for example `v1.7.0`.
+4. Push a tag matching `v<version>`, for example `v1.7.1`.
 
 The tagged-release workflow checks that tag and manifest match, validates the build, runs browser tests and creates a GitHub release containing the install ZIP and checksums. Regular pushes/PRs run read-only validation.
 
@@ -63,3 +63,10 @@ Theme-added text is currently German. English documentation is included. A catal
 ## Native window styling in 1.7.0
 
 Edit `src/theme/steamwindows.custom.css` for the remaining native windows. The new patch uses the existing desktop UI roots and shared controls, without new JavaScript. `npm test` also runs the window regression fixtures. Their portable selector tokens do not contain account data or a copy of Steam CSS. To additionally test against a locally installed client, set `HYPERSHIFT_NATIVE_CSS` to its `steamui/css` directory. See [window coverage](WINDOW-COVERAGE.md).
+
+
+## Downloads and toast regression tests in 1.7.1
+
+`downloads.custom.css` is a desktop-only patch loaded after the main library CSS. It separates full artwork from the graph and colors the actual progress fill rather than the label container. Do not replace Steam's inline widths, byte counts or action handlers.
+
+`node tests/downloads.cjs` exercises the native class structure with synthetic data and a vector image marked at all four corners. It checks four viewport sizes, original node identity, progress widths at 0/3/64/100%, controls, nested notification text contrast and unrelated-page isolation. It covers all four current toast template maps. Optional `HYPERSHIFT_NATIVE_CSS` and `HYPERSHIFT_SCREENSHOTS` work as in `tests/windows.cjs`; these remain local fixture tests, not automated use of the real client.

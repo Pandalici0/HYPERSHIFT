@@ -1,5 +1,14 @@
 # Changelog
 
+
+## 1.7.1 — 2026-10-05
+
+- Show the complete active-download artwork without Steam's zoom or fading mask; keep the chart beside the image.
+- Separate download/install labels from their 6px progress tracks. Keep Steam's inline fill widths and live values intact.
+- Correct dark status text on the light active-download panel, including network/max/disk values and the remaining time.
+- Fix inherited light text and reduced text opacity in native notification headers, nested names, game titles, messages and achievement descriptions. Keep native toast animation/timing and actions.
+- Add portable download/toast fixtures and tests at four desktop sizes, including 0/3/64/100% fill widths, native action models, four toast templates and scope isolation. Also checked against the installed Steam CSS; live-client review remains separate.
+
 ## 1.7.0 — 2026-10-05
 
 - Add native Steam settings and game properties styling: general, updates, betas, installed files, DLC, Workshop, controller, recording, privacy and shortcut customization.

@@ -4,7 +4,7 @@ const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),tokens=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/windows-tokens.json'),'utf8'));
 const css=fs.readFileSync(path.join(root,'steamwindows.custom.css'),'utf8');
 const settingsCSS=fs.readFileSync(path.join(root,'settings.custom.css'),'utf8');
-const allCSS=['libraryroot.custom.css','friends.custom.css','dialogs.css','settings.custom.css','notifications.custom.css','overlay.custom.css','steamwindows.custom.css','login.custom.css'].map(n=>fs.readFileSync(path.join(root,n),'utf8')).join('\n');
+const allCSS=['libraryroot.custom.css','downloads.custom.css','friends.custom.css','dialogs.css','settings.custom.css','notifications.custom.css','overlay.custom.css','steamwindows.custom.css','login.custom.css'].map(n=>fs.readFileSync(path.join(root,n),'utf8')).join('\n');
 const color=n=>getComputedStyle(n).color;
 async function readable(page,selector){
  const samples=await page.locator(selector).evaluateAll(nodes=>{

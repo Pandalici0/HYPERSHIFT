@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.7.2 — 2026-10-05
+
+- Remove the purple download-chart block caused by stroke inheritance into invisible SVG history hit areas. Preserve real graph bars, disk lines and hover behavior.
+- Correct the native paused/waiting status row and network legends, including dark readable percentages without changing live progress widths.
+- Restore the native Steam Settings titlebar above the content with visible close/min/max controls and reserved space. Retain original handlers and scroll behavior.
+- Restyle the special update-timing card and section labels on the Downloads settings page; remove dark inner field backgrounds.
+- Keep notification text readable while hovered by removing the inner dark hover wash.
+- Verify native SVG/status and same-element window chrome models, contrast, control hit targets and viewport behavior with portable fixtures and installed Steam CSS. Live-client review remains separate.
+
 
 ## 1.7.1 — 2026-10-05
 

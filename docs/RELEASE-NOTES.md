@@ -1,6 +1,6 @@
 HYPERSHIFT for Millennium by **pandalici0**.
 
-New in 1.7.1: complete download artwork, separate readable progress tracks and dark nested notification text.
+New in 1.7.2: clean download graphs without purple blocks, readable paused percentages and network legends, restored Settings close/min/max controls, and a readable update-timing card. Notification hover contrast is also corrected.
 
 Added in 1.7.0: native Steam settings, game properties and auxiliary desktop windows, including storage, installation/cloud dialogs, server browser and media controls.
 

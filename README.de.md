@@ -24,7 +24,7 @@ Spiele, Spielzeit, Erfolge und Aktionen stammen aus Steam. Der Skin fügt keine 
 
 Voraussetzung: Steam für Windows und installiertes [Millennium](https://steambrew.app/).
 
-1. `HYPERSHIFT-Millennium-1.7.1.zip` aus den Releases herunterladen und entpacken.
+1. `HYPERSHIFT-Millennium-1.7.2.zip` aus den Releases herunterladen und entpacken.
 2. Den Ordner `hypershift` in `millennium/themes/` innerhalb deiner Steam-Installation kopieren.
 3. In Millenniums **Designs** HYPERSHIFT auswählen und Theme-JavaScript erlauben.
 4. Theme neu laden. Bereits offene Freunde-, Chat- und Einstellungsfenster bei Bedarf neu öffnen.

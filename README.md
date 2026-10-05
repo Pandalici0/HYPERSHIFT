@@ -24,7 +24,7 @@ The skin uses Steam's real games, statistics and controls. It does not add games
 
 Requires Steam desktop on Windows and an installed [Millennium](https://steambrew.app/).
 
-1. Download `HYPERSHIFT-Millennium-1.7.1.zip` from Releases and extract it.
+1. Download `HYPERSHIFT-Millennium-1.7.2.zip` from Releases and extract it.
 2. Place the included `hypershift` folder inside your Steam installation's `millennium/themes/` directory.
 3. Select **HYPERSHIFT** in Millennium's Designs/Themes settings, and enable JavaScript for this theme.
 4. Reload the theme. Reopen friends/chat/settings windows if they still show their previous appearance.

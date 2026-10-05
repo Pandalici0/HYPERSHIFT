@@ -9,12 +9,13 @@ async function contrast(page){
   const rgb=s=>s.match(/[\d.]+/g).slice(0,3).map(Number);
   const lum=c=>c.map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4}).reduce((a,v,i)=>a+v*[.2126,.7152,.0722][i],0);
   return ns.filter(n=>n.getClientRects().length).map(n=>{
-   let p=n,bg,opacity=1;while(p){const c=getComputedStyle(p);opacity*=Number(c.opacity);if(!bg&&c.backgroundColor!=='rgba(0, 0, 0, 0)'&&c.backgroundColor!=='transparent')bg=rgb(c.backgroundColor);p=p.parentElement}
-   bg=bg||[255,255,255];const a=lum(rgb(getComputedStyle(n).color)),b=lum(bg),r=n.getBoundingClientRect();
-   return {text:n.textContent.slice(0,65),ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05),opacity,width:r.width};
+   let p=n,opacity=1;const layers=[];while(p){const c=getComputedStyle(p);opacity*=Number(c.opacity);layers.push(c.backgroundColor);p=p.parentElement}
+   let bg=[255,255,255];for(const layer of layers.reverse()){const v=layer.match(/[\d.]+/g)?.map(Number);if(!v)continue;const alpha=v.length>3?v[3]:1;bg=bg.map((x,i)=>v[i]*alpha+x*(1-alpha))}
+   const a=lum(rgb(getComputedStyle(n).color)),b=lum(bg),r=n.getBoundingClientRect();
+   return {text:n.textContent.slice(0,65),ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05),opacity,width:r.width,bg,color:getComputedStyle(n).color};
   });
  });
- assert.ok(samples.length>30);for(const s of samples){assert.ok(s.ratio>=4.5,`${s.text}: contrast ${s.ratio}`);assert.equal(s.opacity,1,`${s.text}: opacity`);assert.ok(s.width>0)}
+ assert.ok(samples.length>30);for(const s of samples){assert.ok(s.ratio>=4.5,`${s.text}: contrast ${s.ratio}, ${s.color} over ${s.bg}`);assert.equal(s.opacity,1,`${s.text}: opacity`);assert.ok(s.width>0)}
 }
 (async()=>{
  const browser=await chromium.launch({headless:true,...(process.env.HYPERSHIFT_BROWSER_CHANNEL?{channel:process.env.HYPERSHIFT_BROWSER_CHANNEL}:{})});
@@ -36,6 +37,11 @@ async function contrast(page){
   assert.equal(await page.locator('.'+g.HeaderImage).evaluate(n=>getComputedStyle(n).transform),'none');
   assert.equal(await page.locator('.'+g.HeroContainer).evaluate(n=>getComputedStyle(n).maskImage),'none');
   assert.equal(await page.locator('.'+g.GraphLine).evaluate(n=>getComputedStyle(n).fill),'none','Disk line must never become a filled block');
+  const hitAreas=page.locator('.'+g.GraphBarEmpty);
+  assert.deepEqual(await hitAreas.evaluateAll(ns=>ns.map(n=>{const c=getComputedStyle(n);return [c.fill,c.stroke,c.pointerEvents]})),Array(3).fill(['rgba(0, 0, 0, 0)','none','all']));
+  await hitAreas.first().hover();assert.equal(await page.locator('body').getAttribute('data-sample'),'40','Invisible history hit areas retain hover behavior');
+  assert.equal(await page.locator('.'+g.DiskPoint).first().evaluate(n=>getComputedStyle(n).stroke),'rgb(229, 248, 56)');
+  await page.mouse.move(5,5);
   for(const pct of [0,3,64,100]){
    await page.locator('[data-kind="disk"]').evaluate((n,pct)=>{n.firstElementChild.style.width=pct+'%';n.setAttribute('aria-valuenow',pct)},pct);
    const actual=await page.locator('[data-kind="disk"]').evaluate(n=>({pct:Number(n.getAttribute('aria-valuenow')),inline:n.firstElementChild.style.width,ratio:n.firstElementChild.getBoundingClientRect().width/n.getBoundingClientRect().width,height:n.getBoundingClientRect().height}));
@@ -65,5 +71,15 @@ async function contrast(page){
   fs.mkdirSync(process.env.HYPERSHIFT_SCREENSHOTS,{recursive:true});await page.setViewportSize({width:1304,height:1000});await page.locator('[data-kind="disk"]').evaluate(n=>{n.firstElementChild.style.width='3%';n.setAttribute('aria-valuenow','3')});
   await page.screenshot({path:path.join(process.env.HYPERSHIFT_SCREENSHOTS,'downloads-and-toasts.png')});
  }
- assert.deepEqual(errors,[]);await browser.close();console.log('PASS: complete download artwork, four viewport sizes, live fill widths 0/3/64/100, native action models, nested toast contrast and scope isolation');
+ // React renders a different status tree when paused. Keep the original action
+ // control, and model only the native replacement of the status subtree.
+ await page.locator('.'+d.SectionItemStatus).evaluate((n,d)=>{n.innerHTML=`<div class="${d.ProgressPercentageAndBar}"><div class="${d.LabelRow}"><div class="${d.State}" data-readable>Pausiert</div><div class="${d.Progress}" data-readable>41 %</div></div><div class="${d.ProgressBar} ${d.NotActive}" role="progressbar" aria-valuenow="41"><div style="width:41%"></div></div></div>`},d);
+ for(const [width,height] of [[1304,672],[800,720]]){
+  await page.setViewportSize({width,height});
+  await contrast(page);
+  const track=await page.locator('[aria-valuenow="41"]').evaluate(n=>({inline:n.firstElementChild.style.width,ratio:n.firstElementChild.getBoundingClientRect().width/n.getBoundingClientRect().width,height:n.getBoundingClientRect().height}));
+  assert.equal(track.inline,'41%');assert.ok(Math.abs(track.ratio-.41)<.002);assert.equal(track.height,6);
+ }
+ if(process.env.HYPERSHIFT_SCREENSHOTS){await page.setViewportSize({width:1304,height:1000});await page.screenshot({path:path.join(process.env.HYPERSHIFT_SCREENSHOTS,'downloads-paused.png')})}
+ assert.deepEqual(errors,[]);await browser.close();console.log('PASS: complete artwork, active/paused contrast, graph hover areas without painted blocks, four viewport sizes, live fill widths, native action models, nested toast contrast and scope isolation');
 })().catch(e=>{console.error(e);process.exit(1)});

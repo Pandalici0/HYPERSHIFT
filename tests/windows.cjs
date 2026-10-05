@@ -70,5 +70,28 @@ async function readable(page,selector){
  await page.getByRole('button',{name:'Auswahl übernehmen'}).click();assert.equal(await page.locator('body').getAttribute('data-cloud'),'selected');assert.equal(await page.getByRole('button',{name:'Verschieben'}).isDisabled(),true);
  assert.equal(await page.locator('#outside').evaluate(n=>getComputedStyle(n).backgroundColor),'rgb(13, 25, 38)');
  if(process.env.HYPERSHIFT_SCREENSHOTS){await page.setViewportSize({width:1000,height:1200});await page.screenshot({path:path.join(process.env.HYPERSHIFT_SCREENSHOTS,'windows-controls.png')})}
- assert.deepEqual(errors,[]);await browser.close();console.log('PASS: properties/settings tabs, contrast, controls, three popup sizes, native row geometry, storage/server/cloud/media/report panels');
+ // Settings uses a single TitleBar.title-area element with native div controls.
+ // Content must reserve titlebar space and never cover or intercept close.
+ await page.goto(pathToFileURL(path.join(__dirname,'fixtures/settings.html')).href);
+ if(process.env.HYPERSHIFT_NATIVE_CSS)for(const name of ['library.css','chunk~2dcc5aaf7.css'])await page.addStyleTag({path:path.join(process.env.HYPERSHIFT_NATIVE_CSS,name)});
+ await page.addStyleTag({content:allCSS});
+ const nativeClose=await page.getByRole('button',{name:'Schließen',exact:true}).elementHandle();
+ for(const [width,height]of [[850,722],[1100,850]]){
+  await page.setViewportSize({width,height});await readable(page,'[data-readable]');
+  const bounds=await page.locator('.TitleBar').evaluate(n=>{const r=n.getBoundingClientRect(),c=document.querySelector('.DialogContent').getBoundingClientRect();return{top:r.top,height:r.height,contentTop:c.top}});
+  assert.deepEqual(bounds,{top:0,height:38,contentTop:38});
+  for(const [name,action]of [['Minimieren','minimize'],['Maximieren','maximize'],['Schließen','close']]){
+   const b=page.getByRole('button',{name,exact:true});
+   assert.equal(await b.evaluate(n=>{const r=n.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return r.top>=0&&r.right<=innerWidth&&r.height>=30&&(hit===n||n.contains(hit))}),true,`Native ${name} hit target`);
+   await b.click();assert.equal(await page.locator('body').getAttribute('data-window-action'),action);
+  }
+  assert.equal(await page.locator('div[data-timing]').evaluate(n=>getComputedStyle(n).backgroundColor),'rgb(241, 238, 248)');
+  await page.getByRole('button',{name:'Steam entscheidet über den Aktualisierungszeitpunkt'}).click();assert.equal(await page.locator('body').getAttribute('data-timing'),'opened');
+  await page.locator('.'+tokens.paged.PagedSettingDialog_ContentColumn).evaluate(n=>n.scrollTop=500);
+  await page.getByRole('button',{name:'Schließen',exact:true}).click();
+  assert.equal(await nativeClose.evaluate(n=>n===document.querySelector('.closeButton')),true);
+  await page.locator('.'+tokens.paged.PagedSettingDialog_ContentColumn).evaluate(n=>n.scrollTop=0);
+ }
+ if(process.env.HYPERSHIFT_SCREENSHOTS){await page.setViewportSize({width:850,height:722});await page.mouse.move(500,400);await page.screenshot({path:path.join(process.env.HYPERSHIFT_SCREENSHOTS,'settings-close.png')})}
+ assert.deepEqual(errors,[]);await browser.close();console.log('PASS: properties/settings tabs, contrast, native same-element close/min/max chrome, content spacing, scrollable settings, row geometry, storage/server/cloud/media/report panels');
 })().catch(e=>{console.error(e);process.exit(1)});

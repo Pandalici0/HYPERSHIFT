@@ -54,7 +54,7 @@ The original 1.6.3 development also exercised library geometry at eight desktop 
 1. Update the version in `skin.json` and the changelog.
 2. Rebuild and run checks. Update documentation/download names and previews if appropriate.
 3. Commit the generated runtime files with their templates.
-4. Push a tag matching `v<version>`, for example `v1.7.1`.
+4. Push a tag matching `v<version>`, for example `v1.7.2`.
 
 The tagged-release workflow checks that tag and manifest match, validates the build, runs browser tests and creates a GitHub release containing the install ZIP and checksums. Regular pushes/PRs run read-only validation.
 
@@ -70,3 +70,9 @@ Edit `src/theme/steamwindows.custom.css` for the remaining native windows. The n
 `downloads.custom.css` is a desktop-only patch loaded after the main library CSS. It separates full artwork from the graph and colors the actual progress fill rather than the label container. Do not replace Steam's inline widths, byte counts or action handlers.
 
 `node tests/downloads.cjs` exercises the native class structure with synthetic data and a vector image marked at all four corners. It checks four viewport sizes, original node identity, progress widths at 0/3/64/100%, controls, nested notification text contrast and unrelated-page isolation. It covers all four current toast template maps. Optional `HYPERSHIFT_NATIVE_CSS` and `HYPERSHIFT_SCREENSHOTS` work as in `tests/windows.cjs`; these remain local fixture tests, not automated use of the real client.
+
+## Download graph and settings chrome regression tests in 1.7.2
+
+The SVG fixture includes Steam's transparent `GraphBarEmpty` history hit areas, graph groups and hover points. Tests assert that hit rectangles stay transparent and retain hover behavior, and that the native paused status tree keeps its 41% fill and readable legend/percentage text. Contrast checks composite translucent backgrounds.
+
+The settings fixture models the native single `TitleBar.title-area` element, original div-based close/min/max controls, reserved content space, scrolling and the special `FakeContainer` update-timing card. Tests retain the original close node and exercise its local handler at 850×722 and 1100×850. These fixtures use synthetic content, not a running Steam session; reload and review the installed theme separately.

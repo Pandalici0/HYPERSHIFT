@@ -1,4 +1,6 @@
 /* Native desktop/in-game toast cards: retain timers, transforms, hiding and hit targets. */
+/* Inner native hover wash must not darken the lavender card behind dark text. */
+:is(._3ENh9LzRnZgfTyfxp_J2rr,._2NdiftmP-B3C4LPWnNGTCB,.QbSr4hMpMfp0Qtsg4qOh5,.vW8HMuHYS7fdibpUYwTg3) :is(._3-H47wPl1Ng3lh7xGZOPIg,._2h6KD6p6y4vIgO2Toxx-_K,._1k275cE1gk-jpZE5r-37zl,._5HZT7qE6px0VNOBQ7q6Nz) { background:transparent !important; }
 :is(._1OOQPJx0nCNP9ME9toCmV7) { background:#e4e2ee !important; color:#17131e !important; box-shadow:inset 4px 0 #e5f838,inset 0 1px #91829f,inset 0 -1px #91829f !important; }
 :is(._1OOQPJx0nCNP9ME9toCmV7) :is(._3RkGkNRNheAkoRA3migph5) { color:#6253ba !important; }
 :is(._1OOQPJx0nCNP9ME9toCmV7) :is(.QbSr4hMpMfp0Qtsg4qOh5,._1X-O1ANz_xeB1j0CZRNFeA,._2NdiftmP-B3C4LPWnNGTCB,._3ENh9LzRnZgfTyfxp_J2rr,._3V6804k2yutEiF6IWg8axH,._3oKFhPrh1lbp-WtA72Q2Yi,._4egmnB1wTrDll5Mc_eal8,.vW8HMuHYS7fdibpUYwTg3),:is(.QbSr4hMpMfp0Qtsg4qOh5,._1X-O1ANz_xeB1j0CZRNFeA,._2NdiftmP-B3C4LPWnNGTCB,._3ENh9LzRnZgfTyfxp_J2rr,._3V6804k2yutEiF6IWg8axH,._3oKFhPrh1lbp-WtA72Q2Yi,._4egmnB1wTrDll5Mc_eal8,.vW8HMuHYS7fdibpUYwTg3) { background:#e4e2ee !important; color:#17131e !important; border-radius:0 !important; box-shadow:inset 4px 0 #e5f838 !important; text-shadow:none !important; }

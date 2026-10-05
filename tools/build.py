@@ -18,8 +18,29 @@ def manifest():
 
 def expected_files():
     atlas = base64.b64encode((ROOT / 'assets/hypershift-concept.png').read_bytes()).decode()
-    return {p.name: p.read_text(encoding='utf-8').replace(MARKER, atlas).encode('utf-8')
-            for p in sorted((ROOT / 'src/theme').iterdir()) if p.suffix in {'.css', '.js'}}
+    catalogs = {p.stem: json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT / 'locales').glob('*.json'))}
+    keys = set(catalogs['english']['strings'])
+    if len(catalogs) != 31 or any(set(c['strings']) != keys or not all(isinstance(v,str) and v.strip() for v in c['strings'].values()) for c in catalogs.values()):
+        raise ValueError('Incomplete language catalogs')
+    language_json = json.dumps(catalogs,ensure_ascii=False,separators=(',',':'))
+    files = {p.name: p.read_text(encoding='utf-8').replace(MARKER, atlas).replace('__HYPERSHIFT_LOCALES__',language_json).replace('__HYPERSHIFT_VERSION__',manifest()['version'])
+             for p in sorted((ROOT / 'src/theme').iterdir()) if p.suffix in {'.css', '.js'}}
+    files['libraryroot.custom.js'] = files['localization.custom.js'] + '\n' + files['libraryroot.custom.js']
+    def css_vars(c):
+        strings=c['strings'];values={k:strings[k] for k in ['downloads','friends','yourGame','nextLevel','login']}
+        values['loginBanner']=strings['nextLevel']+'\n'+strings['posterOwn']
+        return ';'.join('--hs-l10n-'+k+':'+json.dumps(v,ensure_ascii=False).replace('\\n','\\A ') for k,v in values.items())+';'
+    css='/* Generated from locales/*.json. Also works in CSS-only login windows. */\n:root{'+css_vars(catalogs['english'])+'}\n'
+    for name,c in catalogs.items():
+        css += ':root:lang('+c['locale']+'),:root:lang('+name+'),:root[data-hs-locale="'+c['locale']+'"]{'+css_vars(c)+'}\n'
+    # Region aliases precede the more-specific canonical overrides above.
+    for alias,name in {'zh':'schinese','zh-Hant':'tchinese','zh-HK':'tchinese','zh-Hans':'schinese','nb':'norwegian','nn':'norwegian','es-MX':'latam'}.items():
+        css += ':root:lang('+alias+'){'+css_vars(catalogs[name])+'}\n'
+    # Repeat canonical Chinese selectors so zh cannot override zh-TW.
+    for name in ['schinese','tchinese']:
+        c=catalogs[name];css+=':root:lang('+c['locale']+'),:root[data-hs-locale="'+c['locale']+'"]{'+css_vars(c)+'}\n'
+    files['localization.custom.css']=css
+    return {name:content.encode('utf-8') for name,content in files.items()}
 
 
 def build(check=False):
@@ -74,6 +95,7 @@ def release():
     files += [ROOT / name for name in ('skin.json', 'README.md', 'README.de.md', 'LICENSE',
               'NOTICE.md', 'CHANGELOG.md', 'Install.ps1', 'assets/hypershift-concept.png')]
     files += [p for p in (ROOT / 'docs').rglob('*') if p.is_file()]
+    files += [p for p in (ROOT / 'locales').glob('*.json')]
     with zipfile.ZipFile(destination, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for p in sorted(files):
             info = zipfile.ZipInfo('hypershift/' + p.relative_to(ROOT).as_posix(), (2026, 10, 4, 0, 0, 0))

@@ -24,7 +24,7 @@ The skin uses Steam's real games, statistics and controls. It does not add games
 
 Requires Steam desktop on Windows and an installed [Millennium](https://steambrew.app/).
 
-1. Download `HYPERSHIFT-Millennium-1.7.2.zip` from Releases and extract it.
+1. Download `HYPERSHIFT-Millennium-1.8.0.zip` from Releases and extract it.
 2. Place the included `hypershift` folder inside your Steam installation's `millennium/themes/` directory.
 3. Select **HYPERSHIFT** in Millennium's Designs/Themes settings, and enable JavaScript for this theme.
 4. Reload the theme. Reopen friends/chat/settings windows if they still show their previous appearance.
@@ -63,7 +63,7 @@ The builder uses the Python standard library and needs neither Steam nor a local
 
 ## Compatibility
 
-The desktop design was developed against the Windows Steam UI and Millennium 3.5.0. Theme-added labels currently use German; Steam's own text keeps its configured language. Store/community pages receive action accents rather than a replacement page layout. Big Picture gets a color accent patch, not the full desktop layout.
+The desktop design was developed against the Windows Steam UI and Millennium 3.5.0. Theme labels follow Steam's configured language across all 30 selectable interface languages; optional Arabic is also included. See [language support](docs/LOCALIZATION.md). Store/community pages receive action accents rather than a replacement page layout. Big Picture gets a color accent patch, not the full desktop layout.
 
 Steam updates can change native CSS classes and internal stores. Automated fixtures verify layout and interaction logic but cannot guarantee future client compatibility. The account-independent 1.6.4 library discovery is fixture-tested; the established 1.6.3 desktop design was also confirmed in a running client. Login, notifications and overlay have local fixture coverage; not every live-game or login state has been exercised.
 

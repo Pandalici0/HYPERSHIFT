@@ -23,6 +23,7 @@ $skin = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom
 if ($skin.name -ne 'HYPERSHIFT' -or $skin.author -ne 'pandalici0') { throw 'Unexpected source manifest.' }
 $names = @('skin.json', 'assets/hypershift-concept.png', 'README.md', 'README.de.md', 'LICENSE', 'NOTICE.md', 'CHANGELOG.md', 'Install.ps1')
 $names += @(Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot 'docs') -File -Recurse | ForEach-Object { 'docs/' + $_.FullName.Substring((Join-Path $PSScriptRoot 'docs').Length + 1).Replace('\', '/') })
+$names += @(Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot 'locales') -File | ForEach-Object { 'locales/' + $_.Name })
 $names += @(Get-ChildItem -LiteralPath $PSScriptRoot -File | Where-Object { $_.Extension -in '.css', '.js' } | ForEach-Object { $_.Name })
 foreach ($name in $names) {
     if (-not (Test-Path -LiteralPath (Join-Path $PSScriptRoot $name) -PathType Leaf)) { throw "Missing source file: $name" }

@@ -24,7 +24,7 @@ Spiele, Spielzeit, Erfolge und Aktionen stammen aus Steam. Der Skin fügt keine 
 
 Voraussetzung: Steam für Windows und installiertes [Millennium](https://steambrew.app/).
 
-1. `HYPERSHIFT-Millennium-1.7.2.zip` aus den Releases herunterladen und entpacken.
+1. `HYPERSHIFT-Millennium-1.8.0.zip` aus den Releases herunterladen und entpacken.
 2. Den Ordner `hypershift` in `millennium/themes/` innerhalb deiner Steam-Installation kopieren.
 3. In Millenniums **Designs** HYPERSHIFT auswählen und Theme-JavaScript erlauben.
 4. Theme neu laden. Bereits offene Freunde-, Chat- und Einstellungsfenster bei Bedarf neu öffnen.
@@ -59,7 +59,7 @@ node --check libraryroot.custom.js
 
 Alle Galerie-Bilder sind echte Aufnahmen aus dem laufenden Windows-Steam mit HYPERSHIFT 1.7.2 vom 6. Oktober 2026. Kontaktnamen und fremde Avatare sind sichtbar abgedeckt. Chat und Download-Warteschlange waren bei der Aufnahme leer. Die Werberahmen verändern die aufgenommene Oberfläche nicht. Spielebilder und Marken gehören ihren jeweiligen Rechteinhabern.
 
-Entwickelt für den Windows-Steam-Desktop und Millennium 3.5.0. Zusätzliche Theme-Texte sind derzeit deutsch; Steams eigene Texte verwenden dessen eingestellte Sprache. Shop/Community erhalten Aktionsakzente. Big Picture bekommt Farbakzente und kein vollständiges Desktop-Layout.
+Entwickelt für den Windows-Steam-Desktop und Millennium 3.5.0. Theme-Texte folgen Steams eingestellter Sprache: alle 30 auswählbaren Oberflächensprachen und zusätzlich optional Arabisch. Siehe [Sprachunterstützung](docs/LOCALIZATION.md). Shop/Community erhalten Aktionsakzente. Big Picture bekommt Farbakzente und kein vollständiges Desktop-Layout.
 
 Steam-Updates können native Klassen und interne Schnittstellen verändern. Die Bibliothekslogik von 1.6.4 wird mit Testoberflächen geprüft; das Desktop-Design von 1.6.3 wurde zusätzlich im laufenden Client bestätigt. Für Login, Benachrichtigungen und Overlay bestehen lokale Prüfungen, jedoch keine vollständige Live-Abdeckung aller Zustände.
 

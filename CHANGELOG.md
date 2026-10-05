@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.8.0 — 2026-10-06
+
+- Follow Steam’s interface language for custom UI text, accessible labels, placeholders, menus, footer headings and login captions.
+- Add complete catalogs for all 30 selectable Steam interface languages, plus optional Arabic, with English fallback and region aliases.
+- Replace baked German concept captions and the raster Cyberpunk headline with localized runtime text; retain game logos and the HYPERSHIFT brand.
+- Preserve native translations/actions, Millennium condition identifiers, selected game and search when the language changes.
+- Fit longer headlines/buttons and support non-Latin scripts. Verify 31 catalogs, three viewport sizes, detail labels, config labels and CSS-only login.
+
+
 ## 1.7.2 — 2026-10-05
 
 - Remove the purple download-chart block caused by stroke inheritance into invisible SVG history hit areas. Preserve real graph bars, disk lines and hover behavior.

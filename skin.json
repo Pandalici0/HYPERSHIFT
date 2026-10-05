@@ -1,7 +1,7 @@
 {
   "name": "HYPERSHIFT",
   "author": "pandalici0",
-  "version": "1.7.2",
+  "version": "1.8.0",
   "description": "HYPERSHIFT: custom library, game details, native Steam settings and properties, auxiliary desktop windows, login, friends/chat, notifications and in-game overlay.",
   "tags": [
     "Light",
@@ -50,6 +50,11 @@
     {
       "MatchRegexString": ".*",
       "TargetCss": "login.custom.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "localization.custom.css",
+      "TargetJs": "localization.custom.js"
     }
   ],
   "Conditions": {

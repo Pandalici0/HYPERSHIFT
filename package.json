@@ -1,10 +1,10 @@
 {
   "name": "hypershift-steam-theme-tests",
-  "version": "1.7.2",
+  "version": "1.8.0",
   "private": true,
   "description": "Local browser fixtures for the HYPERSHIFT Millennium theme",
   "scripts": {
-    "test": "node tests/library.cjs && node tests/windows.cjs && node tests/downloads.cjs"
+    "test": "node tests/library.cjs && node tests/windows.cjs && node tests/downloads.cjs && node tests/localization.cjs"
   },
   "devDependencies": {
     "playwright": "1.56.1"

@@ -38,7 +38,7 @@
 }
 .VZ6x_grhNkIYJG__jEEyp .lat0M-V5X4uYd6Mpm1DJ1 > :is(._2v9dClMg2Lmn8UVv6GUeJt,._2EuR68sQbA8eP01DlIfu6O)::before,
 .VZ6x_grhNkIYJG__jEEyp ._27A5ub1QLLIMmgywKVMg4z ._29VQq5eE-j95L-SafIOc1T::before {
- content:"NEXT LEVEL.\A DEIN NÄCHSTER RUN."; white-space:pre-line;
+ content:var(--hs-l10n-loginBanner,"NEXT LEVEL."); white-space:pre-line;
  display:block; padding:18px 24px; background:var(--hs-login-acid);
  color:#0b0b0f; font:900 clamp(26px,4.5vw,44px)/.95 "Segoe UI",Arial,sans-serif;
  letter-spacing:-1.5px; border:1px solid #17131e;
@@ -46,7 +46,7 @@
 }
 .VZ6x_grhNkIYJG__jEEyp :is(._3v6WnuVNx1rJx0x_1AAyPp,._2E_ejdBSC79L4iDC4FAMHY) { display:none !important; }
 .VZ6x_grhNkIYJG__jEEyp ._14exBrSFDthVqeknXgFh4X::after {
- content:"STEAM / ANMELDUNG"; color:#4c405d; font:10px Consolas,monospace; letter-spacing:2px;
+ content:"STEAM / " var(--hs-l10n-login,"Sign in"); color:#4c405d; font:10px Consolas,monospace; letter-spacing:2px;
 }
 .VZ6x_grhNkIYJG__jEEyp ._3NHpq7ZDgg4uYEzUF9RxaQ { color:#17131e !important; }
 .VZ6x_grhNkIYJG__jEEyp :is(.g5L61o-ZrHHmwLEugLjLI,._2OLQBEFErC3eaxHeD7--LU,._3yMMwjOGjHdmMrJbYQyst3,._1A8Mk6QeC0d7bvHDJIoW7o) {

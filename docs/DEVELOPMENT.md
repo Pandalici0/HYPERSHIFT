@@ -54,11 +54,11 @@ The original 1.6.3 development also exercised library geometry at eight desktop 
 1. Update the version in `skin.json` and the changelog.
 2. Rebuild and run checks. Update documentation/download names and previews if appropriate.
 3. Commit the generated runtime files with their templates.
-4. Push a tag matching `v<version>`, for example `v1.7.2`.
+4. Push a tag matching `v<version>`, for example `v1.8.0`.
 
 The tagged-release workflow checks that tag and manifest match, validates the build, runs browser tests and creates a GitHub release containing the install ZIP and checksums. Regular pushes/PRs run read-only validation.
 
-Theme-added text is currently German. English documentation is included. A catalogue submission would additionally require reviewing the catalogue's current language and submission requirements; GitHub publication alone is not a catalogue submission.
+Theme text follows Steam’s interface language. See [localization](LOCALIZATION.md) for catalogs, generated CSS labels and layout tests. English and German documentation is included. A catalogue submission would additionally require reviewing the catalogue's current language and submission requirements; GitHub publication alone is not a catalogue submission.
 
 ## Native window styling in 1.7.0
 

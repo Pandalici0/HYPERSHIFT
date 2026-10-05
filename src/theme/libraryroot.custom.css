@@ -235,13 +235,13 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .hs-live-footer ._2EQ7ghgqIdjKv9jsQC0Zq9 { position:absolute; left:30px; right:210px; top:0; bottom:0; margin:0 !important; display:flex; flex-direction:row; align-items:center; justify-content:flex-start; }
 .hs-live-footer .ip-YZhijAMZcuRoXBGiye { display:flex; align-items:center; justify-content:flex-start; gap:16px; padding:0 12px; min-height:34px; height:100%; max-height:100%; box-sizing:border-box; margin:0 !important; flex:0 1 auto !important; max-width:100%; color:#f0edf9 !important; cursor:pointer; border:0; background:transparent; -webkit-app-region:no-drag; }
 .hs-live-footer .ip-YZhijAMZcuRoXBGiye::before { content:""; display:block; width:21px; height:21px; flex:none; order:-2; background:currentColor; -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2v13m-5-5 5 5 5-5M4 17v5h16v-5' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E") center/contain no-repeat; }
-.hs-live-footer .ip-YZhijAMZcuRoXBGiye::after { content:"DOWNLOADS"; font:800 12px var(--hs-font); flex:none; order:-1; color:inherit; }
+.hs-live-footer .ip-YZhijAMZcuRoXBGiye::after { content:var(--hs-l10n-downloads,"Downloads"); font:800 12px var(--hs-font); flex:none; order:-1; color:inherit; }
 .hs-live-footer .ip-YZhijAMZcuRoXBGiye:hover { color:var(--hs-acid) !important; background:#ffffff05; }
 .hs-live-footer .ip-YZhijAMZcuRoXBGiye>._1KrJ3sFAqPBN9mfpaNTU5F,.hs-live-footer .hs-idle-queue { display:none !important; }
 .hs-live-footer :is(._1sCy-pm412Smb0wJx0W-4,._3wJnTtcTLEp0R7eQj_mK8Y,._1xCcFYWIrJ7W8WRDmGvR3y) { color:#c7c1d7 !important; font:11px var(--hs-font) !important; text-transform:none !important; }
 .hs-live-footer ._1TdaAqMFadi0UTqilrkelR { position:absolute; right:18px; top:0; bottom:0; padding:0 8px; display:flex; align-items:center; gap:12px; border:0; border-radius:0; background:transparent; color:#f0edf9 !important; cursor:pointer; -webkit-app-region:no-drag; }
 .hs-live-footer ._1TdaAqMFadi0UTqilrkelR ._3OhUxFVlQYr9W5ThxstR8k { font-size:0 !important; color:inherit !important; }
-.hs-live-footer ._1TdaAqMFadi0UTqilrkelR ._3OhUxFVlQYr9W5ThxstR8k::after { content:"FREUNDE"; font:800 12px var(--hs-font); }
+.hs-live-footer ._1TdaAqMFadi0UTqilrkelR ._3OhUxFVlQYr9W5ThxstR8k::after { content:var(--hs-l10n-friends,"Friends"); font:800 12px var(--hs-font); }
 .hs-live-footer ._1TdaAqMFadi0UTqilrkelR:hover { color:var(--hs-acid) !important; }
 .hs-live-footer ._1TdaAqMFadi0UTqilrkelR ._1KrJ3sFAqPBN9mfpaNTU5F { order:-1; }
 .hs-live-footer ._1KrJ3sFAqPBN9mfpaNTU5F { width:21px; height:21px; margin:0; color:inherit !important; }
@@ -262,7 +262,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 /* Actual installed Steam download classes. Native queue, handlers and virtualization stay intact. */
 ._1bq4x9pa4-9RLY-dXWUZTp { background:var(--hs-paper) !important; color:var(--hs-ink) !important; }
 ._1bq4x9pa4-9RLY-dXWUZTp ._373v1eWNyaPKhgnea9FZSt { background:#0b0b0f !important; border-bottom:4px solid var(--hs-acid); }
-._1bq4x9pa4-9RLY-dXWUZTp ._373v1eWNyaPKhgnea9FZSt:has(.pHDI1ddoKXceD5KL7W-4z)::before { content:"DOWNLOADS"; position:absolute; z-index:4; top:32px; left:24px; color:#f2eff9; font:clamp(34px,4.2vw,54px)/.95 var(--hs-display); letter-spacing:-.02em; pointer-events:none; }
+._1bq4x9pa4-9RLY-dXWUZTp ._373v1eWNyaPKhgnea9FZSt:has(.pHDI1ddoKXceD5KL7W-4z)::before { content:var(--hs-l10n-downloads,"Downloads"); position:absolute; z-index:4; top:32px; left:24px; color:#f2eff9; font:clamp(34px,4.2vw,54px)/.95 var(--hs-display); letter-spacing:-.02em; pointer-events:none; }
 ._1bq4x9pa4-9RLY-dXWUZTp ._3mZ2rKd2RECK4q4ufmsDYX.pHDI1ddoKXceD5KL7W-4z { display:none !important; }
 ._1bq4x9pa4-9RLY-dXWUZTp :is(._1ashwbbBZrppDqaals3644,._3KDkLoCR8OM8xfdQysKn9t,._3GBFL10vEfhI28U95WaqMj,._3vx2cPxB5ZIHpPzmnqKy8) { background:#0b0b0f !important; background-image:none !important; }
 ._1bq4x9pa4-9RLY-dXWUZTp .edQzwM57P-T5K3eDGkyvZ { background:linear-gradient(90deg,#0b0b0f00,#0b0b0f) !important; }
@@ -397,7 +397,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .hs-detail-body ._3Yf8b2v5oOD8Wqsxu04ar._1U7LKpx70kEsz3jJwAFOi- ._1EAxK56o5a9Nieu5HYkJ4k svg [fill]:not([fill="none"]) { fill:currentColor !important; }
 .hs-detail-body ._3Yf8b2v5oOD8Wqsxu04ar._1U7LKpx70kEsz3jJwAFOi- ._1EAxK56o5a9Nieu5HYkJ4k svg [stroke]:not([stroke="none"]) { stroke:currentColor !important; }
 .hs-detail-body ._3Yf8b2v5oOD8Wqsxu04ar._1U7LKpx70kEsz3jJwAFOi- ._1YbtIWcfkQJOysLXQbwzRf { position:absolute !important; left:var(--hs-stat-left); top:var(--hs-stat-top); width:var(--hs-stat-width) !important; height:auto !important; min-width:0 !important; max-height:none !important; padding:18px 22px 8px; display:block !important; overflow:visible !important; background:#101015 !important; color:#efedf7 !important; border:1px solid #332d40; border-radius:0 !important; clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% calc(100% - 24px),calc(100% - 24px) 100%,0 100%); box-sizing:border-box; transform:none !important; z-index:3; }
-.hs-detail-body ._3Yf8b2v5oOD8Wqsxu04ar._1U7LKpx70kEsz3jJwAFOi- ._1YbtIWcfkQJOysLXQbwzRf::before { content:"DEIN SPIEL"; display:block; color:#efedf7; font:400 24px/1.2 Impact,"Arial Black",sans-serif; letter-spacing:.055em; padding-left:26px; margin-bottom:10px; background:linear-gradient(#e5f838,#e5f838) left center/14px 14px no-repeat; }
+.hs-detail-body ._3Yf8b2v5oOD8Wqsxu04ar._1U7LKpx70kEsz3jJwAFOi- ._1YbtIWcfkQJOysLXQbwzRf::before { content:var(--hs-l10n-yourGame,"Your game"); display:block; color:#efedf7; font:400 24px/1.2 Impact,"Arial Black",sans-serif; letter-spacing:.055em; padding-left:26px; margin-bottom:10px; background:linear-gradient(#e5f838,#e5f838) left center/14px 14px no-repeat; }
 .hs-detail-body ._3Yf8b2v5oOD8Wqsxu04ar._1U7LKpx70kEsz3jJwAFOi- .zjtAIAWI6HE0oCtJzw6Qt { display:block !important; position:static !important; height:auto !important; min-height:0 !important; }
 .hs-detail-body ._3Yf8b2v5oOD8Wqsxu04ar._1U7LKpx70kEsz3jJwAFOi- ._1mDAVT4sTzFRwJtlKCw2Ws { display:flex !important; flex-flow:column !important; align-items:stretch !important; width:100% !important; gap:0 !important; opacity:1 !important; transform:none !important; }
 .hs-detail-body ._3Yf8b2v5oOD8Wqsxu04ar._1U7LKpx70kEsz3jJwAFOi- ._1kiZKVbDe-9Ikootk57kpA { box-sizing:border-box; flex-shrink:0 !important; width:100% !important; margin:0 !important; padding:13px 0 !important; min-height:64px; align-items:center; border-radius:0 !important; border-top:1px solid #ffffff24; background:transparent !important; }
@@ -540,3 +540,18 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .hs-side-game[data-appid="381210"] .hs-side-cover { background-image:var(--hs-atlas);background-size:5066.66666667% 2940.62500000%;background-position:1.40329469% 41.91419142%; }
 .hs-side-game[data-appid="730"] .hs-side-cover { background-image:var(--hs-atlas);background-size:4917.64705882% 2767.64705882%;background-position:1.34310134% 46.30650496%; }
 .hs-side-game[data-appid="251570"] .hs-side-cover { background-image:var(--hs-atlas);background-size:5066.66666667% 2851.51515152%;background-position:1.34228188% 50.88105727%; }
+
+/* Translatable captions replace lettering baked into the concept atlas.
+   Logos and game names remain original brand artwork. */
+.hs-art-caption{position:absolute;z-index:2;left:0;top:0;width:min(100%,calc(172 * var(--hs-u)));min-height:calc(82 * var(--hs-u));padding:calc(15 * var(--hs-u)) calc(12 * var(--hs-u));box-sizing:border-box;background:#0b0b0f;color:#efedf7;font:700 max(9px,calc(11 * var(--hs-u)))/1.2 var(--hs-font);overflow-wrap:anywhere;white-space:normal;clip-path:polygon(0 0,100% 0,100% 82%,90% 100%,0 100%);pointer-events:none;}
+.hs-feature-art .hs-art-caption{width:min(100%,calc(190 * var(--hs-u)));min-height:calc(116 * var(--hs-u));padding:calc(22 * var(--hs-u)) calc(20 * var(--hs-u));}
+.hs-art-caption[hidden]{display:none;}
+.hs-home[data-cyberpunk="true"] .hs-headline{background-image:none !important;}
+.hs-home[data-cyberpunk="true"] .hs-headline-text{color:var(--hs-ink) !important;}
+.hs-home[data-cyberpunk="true"] .hs-game-title{color:var(--hs-ink) !important;}
+.hs-headline-text{min-width:0;}
+.hs-play{white-space:normal;line-height:1.05;padding:6px 12px;overflow-wrap:anywhere;}
+.hs-poster-fallback{max-width:100%;text-align:center;overflow-wrap:anywhere;}
+:root:is(:lang(ja),:lang(ko),:lang(zh),:lang(th),:lang(ar),:lang(vi)){--hs-display:"Segoe UI","Microsoft YaHei","Yu Gothic","Malgun Gothic",Arial,sans-serif;}
+:root[data-hs-locale="ar"] :is(.hs-feature-copy,.hs-poster-caption,.hs-popup,.hs-art-caption,.hs-sidebar){direction:rtl;text-align:start;}
+.hs-return{max-width:calc(100vw - 32px);white-space:normal;}

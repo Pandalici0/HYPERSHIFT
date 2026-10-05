@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.7.0 — 2026-10-05
+
+- Add native Steam settings and game properties styling: general, updates, betas, installed files, DLC, Workshop, controller, recording, privacy and shortcut customization.
+- Style storage, install/uninstall, moves/backups, cloud conflicts, launch options, non-Steam game selection, server/player browsers, media controls, sharing, system reports, licenses and additional friend/group dialogs.
+- Add black settings navigation, acid-yellow selection, readable lavender fields, custom toggle states and consistent dialog/window controls. Long navigation labels can wrap.
+- Cover 52 native root types and five paged-navigation variants discovered in the installed client, using a scoped wildcard window patch for localized popup titles.
+- Preserve native actions, row geometry, previews and storage-category colors; no new JavaScript is injected for these windows.
+- Verify representative windows at three sizes with original Steam CSS and portable fixtures; check contrast, controls and library compatibility.
+
+See [window coverage and test limitations](docs/WINDOW-COVERAGE.md).
+
 ## 1.6.4 — 2026-10-04
 
 - First portable public package for `pandalici0/HYPERSHIFT`.

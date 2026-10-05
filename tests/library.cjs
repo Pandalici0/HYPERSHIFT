@@ -5,7 +5,7 @@ const {pathToFileURL} = require('node:url');
 const {chromium} = require('playwright');
 const root = path.resolve(__dirname, '..');
 const script = fs.readFileSync(path.join(root, 'libraryroot.custom.js'), 'utf8');
-const css = fs.readFileSync(path.join(root, 'libraryroot.custom.css'), 'utf8');
+const css = fs.readFileSync(path.join(root, 'libraryroot.custom.css'), 'utf8') + fs.readFileSync(path.join(root, 'steamwindows.custom.css'), 'utf8');
 const hashA = 'a'.repeat(40), hashB = 'b'.repeat(40);
 const artwork = '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300"><rect width="600" height="300" fill="#45366b"/></svg>';
 

@@ -54,8 +54,12 @@ The original 1.6.3 development also exercised library geometry at eight desktop 
 1. Update the version in `skin.json` and the changelog.
 2. Rebuild and run checks. Update documentation/download names and previews if appropriate.
 3. Commit the generated runtime files with their templates.
-4. Push a tag matching `v<version>`, for example `v1.6.4`.
+4. Push a tag matching `v<version>`, for example `v1.7.0`.
 
 The tagged-release workflow checks that tag and manifest match, validates the build, runs browser tests and creates a GitHub release containing the install ZIP and checksums. Regular pushes/PRs run read-only validation.
 
 Theme-added text is currently German. English documentation is included. A catalogue submission would additionally require reviewing the catalogue's current language and submission requirements; GitHub publication alone is not a catalogue submission.
+
+## Native window styling in 1.7.0
+
+Edit `src/theme/steamwindows.custom.css` for the remaining native windows. The new patch uses the existing desktop UI roots and shared controls, without new JavaScript. `npm test` also runs the window regression fixtures. Their portable selector tokens do not contain account data or a copy of Steam CSS. To additionally test against a locally installed client, set `HYPERSHIFT_NATIVE_CSS` to its `steamui/css` directory. See [window coverage](WINDOW-COVERAGE.md).

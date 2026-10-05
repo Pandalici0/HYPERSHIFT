@@ -15,6 +15,7 @@ Lavender surfaces. Black panels. Acid-yellow actions. Oversized typography and s
 - Animated HYPERSHIFT header menu, native back/forward navigation and visible window controls.
 - Downloads, friends, chat, desktop login, Steam Guard and account selection.
 - Millennium settings, configuration dialogs, notifications and the desktop in-game overlay.
+- Native Steam settings, properties, storage, install/backup/cloud dialogs, server browser and media controls. See [window coverage](docs/WINDOW-COVERAGE.md).
 - Shared styling for native context menus; accent colors for store pages and Big Picture.
 
 The skin uses Steam's real games, statistics and controls. It does not add games to your library. Login is styled with CSS; native authentication stays in Steam. No account inventory, local cache index or machine-specific path is bundled in this release.
@@ -23,7 +24,7 @@ The skin uses Steam's real games, statistics and controls. It does not add games
 
 Requires Steam desktop on Windows and an installed [Millennium](https://steambrew.app/).
 
-1. Download `HYPERSHIFT-Millennium-1.6.4.zip` from Releases and extract it.
+1. Download `HYPERSHIFT-Millennium-1.7.0.zip` from Releases and extract it.
 2. Place the included `hypershift` folder inside your Steam installation's `millennium/themes/` directory.
 3. Select **HYPERSHIFT** in Millennium's Designs/Themes settings, and enable JavaScript for this theme.
 4. Reload the theme. Reopen friends/chat/settings windows if they still show their previous appearance.
@@ -31,6 +32,10 @@ Requires Steam desktop on Windows and an installed [Millennium](https://steambre
 The repository also has ready-built files: a clone or source archive can be placed in `millennium/themes/hypershift` directly. For a clean end-user download, prefer the release ZIP. See [installation, updating and removal](docs/INSTALLATION.md) for details and an optional installer with backups.
 
 ## More previews
+
+![Native Steam game properties](docs/images/properties.png)
+
+New in 1.7.0: native Steam properties/settings and auxiliary windows. This preview uses a local fixture with the installed Steam CSS.
 
 | Game details | Steam menu |
 | --- | --- |

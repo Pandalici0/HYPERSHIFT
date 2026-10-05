@@ -1,8 +1,8 @@
 {
   "name": "HYPERSHIFT",
   "author": "pandalici0",
-  "version": "1.6.4",
-  "description": "HYPERSHIFT: library and game details, login, downloads, friends/chat, Millennium settings, notifications and desktop in-game overlay.",
+  "version": "1.7.0",
+  "description": "HYPERSHIFT: custom library, game details, native Steam settings and properties, auxiliary desktop windows, login, friends/chat, notifications and in-game overlay.",
   "tags": [
     "Light",
     "Library",
@@ -38,6 +38,10 @@
     {
       "MatchRegexString": ".*",
       "TargetCss": "overlay.custom.css"
+    },
+    {
+      "MatchRegexString": ".*",
+      "TargetCss": "steamwindows.custom.css"
     },
     {
       "MatchRegexString": ".*",

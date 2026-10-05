@@ -15,6 +15,7 @@ Lavendel, Schwarz und Acid-Gelb. Große Schrift, klare Kontraste und kantige Fl�
 - Animiertes Menü unter dem HYPERSHIFT-Logo, Zurück/Vorwärts und ausgerichtete Fensterbuttons.
 - Downloads, Freundesliste, Chat, Desktop-Login, Steam Guard und Kontoauswahl.
 - Millennium-Einstellungen, Konfigurationsfenster, Benachrichtigungen und das Desktop-Ingame-Overlay.
+- Native Steam-Einstellungen, Spieleigenschaften, Speicher, Installation/Backup/Cloud, Serverbrowser und Medienverwaltung. Siehe [Fensterabdeckung](docs/WINDOW-COVERAGE.md).
 - Passende Kontextmenüs; farbliche Akzente für Shop-Seiten und Big Picture.
 
 Spiele, Spielzeit, Erfolge und Aktionen stammen aus Steam. Der Skin fügt keine fremden Spiele hinzu. Die Anmeldung erhält ausschließlich CSS: Steams native Authentifizierung bleibt erhalten. Die Veröffentlichung enthält keine persönliche Spieleliste, keinen lokalen Cache-Index und keine gerätespezifischen Pfade.
@@ -23,7 +24,7 @@ Spiele, Spielzeit, Erfolge und Aktionen stammen aus Steam. Der Skin fügt keine 
 
 Voraussetzung: Steam für Windows und installiertes [Millennium](https://steambrew.app/).
 
-1. `HYPERSHIFT-Millennium-1.6.4.zip` aus den Releases herunterladen und entpacken.
+1. `HYPERSHIFT-Millennium-1.7.0.zip` aus den Releases herunterladen und entpacken.
 2. Den Ordner `hypershift` in `millennium/themes/` innerhalb deiner Steam-Installation kopieren.
 3. In Millenniums **Designs** HYPERSHIFT auswählen und Theme-JavaScript erlauben.
 4. Theme neu laden. Bereits offene Freunde-, Chat- und Einstellungsfenster bei Bedarf neu öffnen.
@@ -45,6 +46,10 @@ node --check libraryroot.custom.js
 [Entwicklung und Tests](docs/DEVELOPMENT.md) · [Änderungsprotokoll](CHANGELOG.md).
 
 ## Vorschauen und Kompatibilität
+
+![Native Spieleigenschaften](docs/images/properties.png)
+
+Neu in 1.7.0: native Steam-Einstellungen, Spieleigenschaften und weitere Fenster. Diese Vorschau ist ein lokaler Testaufbau mit Steams Original-CSS.
 
 Die Vorschauen verwenden lokale Testoberflächen mit Beispieldaten. Das bestätigte Design stammt aus 1.6.3; 1.6.4 übernimmt es und ermittelt Bibliotheksdaten während der Laufzeit aus Steam.
 

@@ -70,4 +70,4 @@ Steam updates can change native CSS classes and internal stores. Automated fixtu
 
 ## License
 
-Code and original interface styling: [MIT](LICENSE), copyright 2026 pandalici0. Steam/game trademarks and game imagery are excluded from that license; see [asset notices](NOTICE.md). This project is independent of Valve and Millennium.
+Code and original interface styling: [MIT](LICENSE), copyright 2026 pandalici0. Steam/game trademarks and game imagery are excluded from that license; see [asset notices](NOTICE.md). 

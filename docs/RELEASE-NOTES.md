@@ -2,6 +2,8 @@ HYPERSHIFT for Millennium by **pandalici0**.
 
 **Your games. A whole new energy.**
 
+HYPERSHIFT **1.8.1** is the publication patch for 1.8.0. It corrects the Chromium test fixture to use Steam's HTML standards mode and rebuilds the download packages. The theme's appearance and native controls are unchanged. The gallery retains the authentic 1.8.0 captures, which also represent 1.8.1.
+
 HYPERSHIFT 1.8.0 brings the theme's custom text to all 30 selectable Steam interface languages, with optional Arabic and an English fallback. Menus, buttons, library captions, placeholders and accessibility labels follow Steam's configured language. Game logos and names retain their original artwork.
 
 The updated gallery shows real English Steam windows running 1.8.0, including the actual friends and chat layout. Contact identities are visibly masked.

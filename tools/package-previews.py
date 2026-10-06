@@ -7,7 +7,7 @@ root = Path(__file__).resolve().parents[1]
 version = json.loads((root / 'skin.json').read_text(encoding='utf-8'))['version']
 images = root / 'docs/images'
 capture = json.loads((images / 'captures.json').read_text(encoding='utf-8'))
-assert capture['themeVersion'] == version, 'Preview capture version differs from theme'
+assert version in capture.get('compatibleThemeVersions', [capture['themeVersion']]), 'Preview captures not approved for this theme version'
 dist = root / 'dist'
 dist.mkdir(exist_ok=True)
 target = dist / f'HYPERSHIFT-Preview-Kit-{version}.zip'

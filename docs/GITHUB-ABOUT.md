@@ -16,6 +16,6 @@ HYPERSHIFT — a bold Steam theme for Millennium. Custom library, game pages, fr
 
 ## Release
 
-Title: **HYPERSHIFT 1.8.0 — Your games. A whole new energy.**
+Title: **HYPERSHIFT 1.8.1 — Your games. A whole new energy.**
 
 Use [RELEASE-NOTES.md](RELEASE-NOTES.md) as the release body. Attach the current install ZIP and `SHA256SUMS.txt` from `dist/`, or let the tag-triggered release workflow build them.

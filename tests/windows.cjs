@@ -53,7 +53,9 @@ async function readable(page,selector){
  // Native tables have fixed-height/virtualized rows. Styles must not change row
  // geometry, readability of dark headers, or selection/control behavior.
  const {server:s,storage:d,cloud:c,props:p,media:m,report:r,recording:g}=tokens;
- const raw='<style>body{margin:0;font:14px Arial;background:white}.DialogHeader{font-size:24px}.test{margin:12px;padding:16px}header{padding:12px}button{padding:10px} .row{height:40px;box-sizing:border-box;display:flex;align-items:center;gap:15px} .native-label{color:#dfe3e6}.dark{background:#242830} .DialogButton{background:#242830;color:white} .DialogButton:disabled{opacity:.35}</style>';
+ // Steam uses standards mode. Retain it when replacing the fixture document;
+ // changing to quirks mode invalidates class matching differently across Chromium builds.
+ const raw='<!doctype html><style>body{margin:0;font:14px Arial;background:white}.DialogHeader{font-size:24px}.test{margin:12px;padding:16px}header{padding:12px}button{padding:10px} .row{height:40px;box-sizing:border-box;display:flex;align-items:center;gap:15px} .native-label{color:#dfe3e6}.dark{background:#242830} .DialogButton{background:#242830;color:white} .DialogButton:disabled{opacity:.35}</style>';
  const groups=`
  <section class="test ${s.ServerBrowserDialog}"><h1 class="DialogHeader" data-readable>Serverbrowser</h1><header class="${s.ServerListHeaderCtr}"><span class="${s.ServerListHeaderCell}" data-readable>Servername / Ping</span></header><div class="row ${s.ServerRow} ${s.SelectedRow}"><div class="${s.ServerRowContents}" data-readable>Beispielserver · 24 ms</div></div><button class="DialogButton Primary" onclick="document.body.dataset.server='connect'">Verbinden</button></section>
  <section class="test ${d.ContentManagement}"><header class="${d.LibraryHeader}"><span class="${d.DriveName}" data-readable>Bibliothek D:</span><span class="${d.Header}" data-readable>Speicher</span></header><div class="row ${d.AppBody} ${d.AppSelected}"><span class="${d.AppName}" data-readable>Beispielspiel</span><span class="${d.AppSize}" data-readable>12 GB</span></div><button class="DialogButton" disabled>Verschieben</button></section>
@@ -64,6 +66,7 @@ async function readable(page,selector){
  <section class="test ${r.SystemReportDialog}"><div class="${r.TextContainer}"><pre class="${r.Text}" data-readable>Systembericht · Beispieldaten</pre></div></section>
  <div id="outside" style="background:rgb(13,25,38);color:rgb(216,230,242)">Außerhalb nativer Fenster</div>`;
  await page.setContent(raw+groups);await page.addStyleTag({content:allCSS});
+ assert.equal(await page.evaluate(()=>document.compatMode),'CSS1Compat','Auxiliary-window fixture must use Steam standards mode');
  await readable(page,'[data-readable]');
  assert.deepEqual(await page.locator('.row').evaluateAll(ns=>ns.map(n=>n.getBoundingClientRect().height)),[40,40]);
  await page.getByRole('button',{name:'Verbinden',exact:true}).click();assert.equal(await page.locator('body').getAttribute('data-server'),'connect');

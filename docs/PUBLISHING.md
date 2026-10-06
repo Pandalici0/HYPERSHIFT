@@ -21,8 +21,8 @@ Check that the authenticated account is `pandalici0`. The local prepared reposit
 ```sh
 gh repo create pandalici0/HYPERSHIFT --public --description "HYPERSHIFT — a bold Steam theme for Millennium. Custom library, game pages, friends, chat and more. Lavender, black and acid yellow. By pandalici0."
 git push -u origin main
-git tag v1.8.0
-git push origin v1.8.0
+git tag v1.8.1
+git push origin v1.8.1
 ```
 
 The tag runs the release workflow, which builds and uploads the install ZIP and checksums. Verify that the workflow and release completed on GitHub. Do not create a duplicate or overwrite an existing repository if that name is already in use; inspect it first.
@@ -32,7 +32,7 @@ If starting from the source ZIP instead of the prepared Git checkout, initialize
 ```sh
 git init --initial-branch=main
 git add .
-git commit -m "Update HYPERSHIFT 1.8.0"
+git commit -m "Update HYPERSHIFT 1.8.1"
 git remote add origin https://github.com/pandalici0/HYPERSHIFT.git
 ```
 
@@ -42,7 +42,7 @@ Use your configured Git commit identity. The prepared checkout uses `pandalici0`
 
 Create a public repository named `HYPERSHIFT` while signed in as `pandalici0`. Upload the files from the source ZIP, including subdirectories and `.github`, so `skin.json` is at the repository root. Avoid adding a separate nested `HYPERSHIFT` directory or the entire local workspace.
 
-Create a release tagged `v1.8.0` and attach `HYPERSHIFT-Millennium-1.8.0.zip` plus `SHA256SUMS.txt` if the workflow has not already published them. The prepared release text is in `docs/RELEASE-NOTES.md`.
+Create a release tagged `v1.8.1` and attach `HYPERSHIFT-Millennium-1.8.1.zip` plus `SHA256SUMS.txt` if the workflow has not already published them. The prepared release text is in `docs/RELEASE-NOTES.md`.
 
 Public GitHub hosting is separate from listing on the Steam Homebrew theme catalogue. A catalogue submission was not prepared or performed.
 

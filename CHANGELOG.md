@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.8.1 — 2026-10-06
+
+- Correct the auxiliary-window test fixture to use Steam's HTML standards mode in Chromium on Windows and GitHub Actions.
+- Rebuild the publication packages without changing the theme's appearance or native controls.
+- Retain the authentic 1.8.0 preview captures; they also represent the unchanged 1.8.1 interface.
+
 ## 1.8.0 — 2026-10-06
 
 - Follow Steam’s interface language for custom UI text, accessible labels, placeholders, menus, footer headings and login captions.

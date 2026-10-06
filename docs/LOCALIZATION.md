@@ -30,4 +30,4 @@ node tests/localization.cjs
 
 Tests cover all catalogs across three library viewport sizes, live switching with selection/search retained, native actions, configuration identifiers, region aliases, detail labels, English fallback and CSS-only login. Longer headlines/buttons fit the available space; non-Latin text uses suitable font fallbacks. Translations have automated completeness/layout checks; they have not all been independently reviewed by native speakers or exercised in live Steam.
 
-Public gallery images remain authentic German Steam captures of 1.7.2 from 6 October 2026. Static screenshots do not change language with Steam and are not presented as captures of every locale.
+Public gallery images are authentic English Steam captures of 1.8.0 from 6 October 2026. Static screenshots do not change language with Steam and are not presented as captures of every locale.

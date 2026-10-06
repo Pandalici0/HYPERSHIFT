@@ -47,7 +47,7 @@ The repository also has ready-built files: a clone or source archive can be plac
 | --- | --- |
 | ![Actual friends window](docs/images/friends.png) | ![Actual chat window](docs/images/chat.png) |
 
-All gallery images are screenshots from the running Windows Steam client with HYPERSHIFT 1.7.2, captured on 6 October 2026. Contact names and third-party avatars are visibly masked. The chat was empty and the download queue was empty at capture time. The promotional frames do not change the captured interface. Game artwork and trademarks belong to their owners.
+All gallery images are screenshots from the running Windows Steam client with HYPERSHIFT 1.8.0, captured in English on 6 October 2026. Contact names and third-party avatars are visibly masked, including the clipped activity contact on the game detail page. The chat was empty and the download queue was empty at capture time. The promotional frames do not change the captured interface. Game artwork and trademarks belong to their owners.
 
 ## Development
 

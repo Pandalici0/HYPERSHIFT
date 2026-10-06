@@ -1,0 +1,166 @@
+{
+  "themeVersion": "1.8.0",
+  "author": "pandalici0",
+  "captureDate": "2026-10-06",
+  "steamInterfaceLanguage": "english",
+  "captureMethod": "Actual Windows Steam window screenshots; native JPEG captures converted to PNG without resizing",
+  "chatState": "Empty conversation; no messages sent",
+  "downloadsState": "Empty queue, zero transfer rates",
+  "privacy": "Opaque masks cover third-party names and avatars. Unmasked UI pixels and original window dimensions are preserved.",
+  "windows": [
+    {
+      "file": "library.png",
+      "width": 1920,
+      "height": 1032,
+      "masks": []
+    },
+    {
+      "file": "game-details.png",
+      "width": 1920,
+      "height": 1032,
+      "masks": [
+        {
+          "x": 338,
+          "y": 950,
+          "width": 440,
+          "height": 17,
+          "label": "CONTACT HIDDEN"
+        }
+      ]
+    },
+    {
+      "file": "downloads.png",
+      "width": 1920,
+      "height": 1032,
+      "masks": []
+    },
+    {
+      "file": "settings.png",
+      "width": 850,
+      "height": 722,
+      "masks": []
+    },
+    {
+      "file": "friends.png",
+      "width": 277,
+      "height": 674,
+      "masks": [
+        {
+          "x": 8,
+          "y": 109,
+          "width": 268,
+          "height": 44,
+          "label": "AVATARS HIDDEN"
+        },
+        {
+          "x": 59,
+          "y": 272,
+          "width": 204,
+          "height": 19,
+          "label": "NAME HIDDEN"
+        },
+        {
+          "x": 57,
+          "y": 385,
+          "width": 206,
+          "height": 19,
+          "label": "NAME HIDDEN"
+        },
+        {
+          "x": 57,
+          "y": 436,
+          "width": 206,
+          "height": 19,
+          "label": "NAME HIDDEN"
+        },
+        {
+          "x": 57,
+          "y": 485,
+          "width": 206,
+          "height": 19,
+          "label": "NAME HIDDEN"
+        },
+        {
+          "x": 57,
+          "y": 537,
+          "width": 206,
+          "height": 19,
+          "label": "NAME HIDDEN"
+        },
+        {
+          "x": 14,
+          "y": 271,
+          "width": 36,
+          "height": 38,
+          "label": ""
+        },
+        {
+          "x": 14,
+          "y": 383,
+          "width": 37,
+          "height": 36,
+          "label": ""
+        },
+        {
+          "x": 14,
+          "y": 432,
+          "width": 37,
+          "height": 38,
+          "label": ""
+        },
+        {
+          "x": 14,
+          "y": 482,
+          "width": 37,
+          "height": 37,
+          "label": ""
+        },
+        {
+          "x": 14,
+          "y": 533,
+          "width": 37,
+          "height": 36,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "file": "chat.png",
+      "width": 740,
+      "height": 650,
+      "masks": [
+        {
+          "x": 42,
+          "y": 13,
+          "width": 120,
+          "height": 27,
+          "label": "CONTACT HIDDEN"
+        },
+        {
+          "x": 12,
+          "y": 15,
+          "width": 24,
+          "height": 24,
+          "label": ""
+        }
+      ]
+    }
+  ],
+  "socialComposition": {
+    "file": "social.png",
+    "width": 1064,
+    "height": 723,
+    "friends": {
+      "x": 12,
+      "y": 24,
+      "width": 277,
+      "height": 674
+    },
+    "chat": {
+      "x": 312,
+      "y": 37,
+      "width": 740,
+      "height": 650
+    }
+  }
+}

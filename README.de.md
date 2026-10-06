@@ -57,7 +57,7 @@ node --check libraryroot.custom.js
 
 [Vollständige Galerie und Bildformate](docs/PREVIEWS.md). Alle Motive sind als PNG und JPG enthalten.
 
-Alle Galerie-Bilder sind echte Aufnahmen aus dem laufenden Windows-Steam mit HYPERSHIFT 1.7.2 vom 6. Oktober 2026. Kontaktnamen und fremde Avatare sind sichtbar abgedeckt. Chat und Download-Warteschlange waren bei der Aufnahme leer. Die Werberahmen verändern die aufgenommene Oberfläche nicht. Spielebilder und Marken gehören ihren jeweiligen Rechteinhabern.
+Alle Galerie-Bilder sind echte Aufnahmen aus dem laufenden Windows-Steam mit HYPERSHIFT 1.8.0 auf Englisch vom 6. Oktober 2026. Kontaktnamen und fremde Avatare sind sichtbar abgedeckt. Chat und Download-Warteschlange waren bei der Aufnahme leer. Die Werberahmen verändern die aufgenommene Oberfläche nicht. Spielebilder und Marken gehören ihren jeweiligen Rechteinhabern.
 
 Entwickelt für den Windows-Steam-Desktop und Millennium 3.5.0. Theme-Texte folgen Steams eingestellter Sprache: alle 30 auswählbaren Oberflächensprachen und zusätzlich optional Arabisch. Siehe [Sprachunterstützung](docs/LOCALIZATION.md). Shop/Community erhalten Aktionsakzente. Big Picture bekommt Farbakzente und kein vollständiges Desktop-Layout.
 

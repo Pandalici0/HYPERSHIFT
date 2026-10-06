@@ -14,6 +14,8 @@ Lavender, black and acid-yellow styling for Steam desktop: library, game details
 
 Download the **HYPERSHIFT-Millennium** ZIP below, extract it and copy its `hypershift` folder to Steam's `millennium/themes/`. Select HYPERSHIFT in Millennium, enable theme JavaScript and reload. Installation instructions and an optional installer with backups are included.
 
+The separate **HYPERSHIFT-Preview-Kit** ZIP includes all eight promotional motifs as PNG/JPG, the overview sheet and the real UI captures. `SHA256SUMS.txt` contains checksums for both downloads. GitHub's source archives contain the editable project.
+
 This public build reads library identities and hero artwork from the current Steam client at runtime. It contains no development-account inventory or machine-specific cache paths. See the README for test coverage and compatibility notes. Code: MIT; third-party game imagery and marks: excluded, see NOTICE.md.
 
 Deutsch: ZIP entpacken, den Ordner `hypershift` nach `millennium/themes/` kopieren, HYPERSHIFT auswählen, Theme-JavaScript aktivieren und neu laden. Anleitung und optionaler Installer sind enthalten; bearbeitbare Quellen stehen im Repository.

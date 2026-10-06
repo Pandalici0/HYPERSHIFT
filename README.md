@@ -1,8 +1,8 @@
 # HYPERSHIFT
 
-**A Steam desktop theme by pandalici0, built for Millennium.**
+**Your games. A whole new energy.**
 
-Lavender surfaces. Black panels. Acid-yellow actions. Oversized typography and sharp corners throughout the client.
+HYPERSHIFT is a bold Steam desktop theme by **pandalici0**, built for **Millennium**. Lavender surfaces, deep black panels and acid-yellow actions give your library a striking new look, with oversized typography, cinematic game artwork and sharp geometric details.
 
 [Deutsch](README.de.md) · [Installation](docs/INSTALLATION.md) · [Changes](CHANGELOG.md) · [Download releases](https://github.com/pandalici0/HYPERSHIFT/releases)
 
@@ -17,6 +17,7 @@ Lavender surfaces. Black panels. Acid-yellow actions. Oversized typography and s
 - Millennium settings, configuration dialogs, notifications and the desktop in-game overlay.
 - Native Steam settings, properties, storage, install/backup/cloud dialogs, server browser and media controls. See [window coverage](docs/WINDOW-COVERAGE.md).
 - Shared styling for native context menus; accent colors for store pages and Big Picture.
+- Custom text that follows Steam's language, with support for all 30 selectable interface languages and optional Arabic.
 
 The skin uses Steam's real games, statistics and controls. It does not add games to your library. Login is styled with CSS; native authentication stays in Steam. No account inventory, local cache index or machine-specific path is bundled in this release.
 
